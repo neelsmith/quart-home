@@ -3,5 +3,6 @@ title: "Neel Smith"
 ---
 
 
-This is a personal web site where I'm planning to make some of my current work available.
- 
+
+- morphological parsing (Greek, Latin, Hebrew)
+- semantic editions of Greek and Latin texts

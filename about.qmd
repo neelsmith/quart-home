@@ -2,4 +2,4 @@
 title: "About"
 ---
 
-About this site
+This is a personal web site where I'm planning to make some of my current work available.
