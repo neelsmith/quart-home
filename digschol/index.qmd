@@ -2,10 +2,12 @@
 title: "Digital scholarship"
 ---
 
-A selection of current work.
+A selection of some work I'm currently developing or maintaining.
 
 
 ## Concepts and code
+
+The fuller information for each of the  
 
 :::: {.columns}
 
@@ -57,6 +59,12 @@ Trmilli
 
 The HMT archive
 
+Manuscript layout
+
+Scholiastic language 
+
+Finding Aristarchus
+
 :::
 
 ::::
@@ -73,11 +81,21 @@ Manuscripts:
 
 List some examples:
 
-- Ptolemy, *Geography*: geographic maps
-- Ptolemy, *Almagest*: precomputed mathematical functions
-- Euclid, *Geometry*: mathematical figures
-- Ancient Greek musical notation
+- Tools for multilingual reading: the Complutensian polyglot Bible
+- Datasets for geographic maps: Ptolemy, *Geography*: 
+- Precomputed mathematical functions: Ptolemy, *Almagest*: 
+- Proofs with mathematical figures: Euclid, *Geometry*; Archimedes, *Spiral Lines*
 - Grammatical inflectional tables
-- The Complutensian polyglot Bible
-- Chronological computation: Jerome
-- Manuscripts with neumes
+- Chronological computation: Jerome's *Chronicles*
+- Documents with ancient Greek musical notation
+- Manuscripts with musical notation in neumes
+
+Lexica:
+
+- LSJMining.jl
+- LexiconMining.jl
+
+## Odds and ends
+
+- Vector alignments
+
