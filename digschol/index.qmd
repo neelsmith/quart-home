@@ -7,7 +7,9 @@ A selection of some work I'm currently developing or maintaining.
 
 ## Concepts and code
 
-The fuller information for each of the  
+The fuller information for each of the links in this section includes narrative presentation of concepts. These could be read sequentially like a book, but I've chosen to present them together with documentation and tutorials using implementations of the concepts.
+
+All the code in the linked sections is in Julia.
 
 :::: {.columns}
 

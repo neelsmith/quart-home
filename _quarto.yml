@@ -11,6 +11,8 @@ website:
         text: Home
       - text: "Digital scholarship"
         file: digschol/index.qmd     
+      - text: "Why Julia?"
+        file: julia.qmd
       - about.qmd
   sidebar:
     - title: "Digital scholarship"
@@ -21,6 +23,7 @@ website:
       contents:
         - personal/index.qmd
         - personal/white.qmd
+        - personal/juliagen.qmd
 
 
 format:

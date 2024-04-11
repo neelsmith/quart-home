@@ -1,0 +1,13 @@
+---
+title: "Why Julia?"
+---
+
+I started using Julia in 2021 because of Pluto notebooks.
+
+A few reasons it's become my language of choice:
+
+- I don't spend time trying to manage versions and environments
+- It runs everywhere
+- It's fast
+- Twenty-first century features are part of the language, not add-ons: mature handling of Unicode, built-in support for unit testing, many other features
+- Productive working environment (Pluto, VS Code including options like Quarto)

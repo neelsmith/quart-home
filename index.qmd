@@ -5,3 +5,5 @@ title: "Neel Smith"
 
 
 I'm a soon-to-be emeritus professor at the College of the Holy Cross.  On this site, I'm starting to gather some of my digital scholarly work.
+
+All pages on this site include a "Published" date showing when the page was last modified.
