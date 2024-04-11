@@ -19,9 +19,10 @@ website:
       contents: 
         - digschol/index.qmd
 
-    - title: "Other projects"
+    - title: "Personal"
       contents:
-        - other/index.qmd  
+        - personal/index.qmd
+        - personal/white.qmd
 
 
 format:

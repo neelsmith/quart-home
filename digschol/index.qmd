@@ -66,6 +66,11 @@ The HMT archive
 
 ## Semantic editions of texts
 
+Manuscripts:
+
+- how they're managed, served, sources
+
+
 List some examples:
 
 - Ptolemy, *Geography*: geographic maps

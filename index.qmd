@@ -4,5 +4,4 @@ title: "Neel Smith"
 
 
 
-- morphological parsing (Greek, Latin, Hebrew)
-- semantic editions of Greek and Latin texts
+I'm a soon-to-be emeritus professor at the College of the Holy Cross.  On this site, I'm starting to gather some of my digital scholarly work.
