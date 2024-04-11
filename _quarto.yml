@@ -1,6 +1,6 @@
 project:
   type: website
-
+date: last-modified 
 website:
   title: "Neel Smith"
   navbar:
@@ -10,9 +10,7 @@ website:
       - href: index.qmd
         text: Home
       - text: "Digital scholarship"
-        file: digschol/index.qmd
-      - text: "Other projects"
-        file: other/index.qmd        
+        file: digschol/index.qmd     
       - about.qmd
   sidebar:
     - title: "Digital scholarship"
