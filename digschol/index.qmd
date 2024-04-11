@@ -1,0 +1,78 @@
+---
+title: "Digital scholarship"
+---
+
+A selection of current work.
+
+
+## Concepts and code
+
+:::: {.columns}
+
+::: {.column width="25%"}
+### Citation
+
+Citation with URNs
+
+Citable texts
+
+Citable objects
+
+Citable images
+
+:::
+
+::: {.column width="5%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="25%"}
+### Digital texts
+
+
+Orthography
+
+Morphological parsing
+
+Kanónes
+
+Tabulae
+
+Luhot
+
+Trmilli
+
+
+
+
+:::
+
+::: {.column width="5%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="25%"}
+### The Homer Multitext project
+
+
+The HMT archive
+
+:::
+
+::::
+
+
+
+
+## Semantic editions of texts
+
+List some examples:
+
+- Ptolemy, *Geography*: geographic maps
+- Ptolemy, *Almagest*: precomputed mathematical functions
+- Euclid, *Geometry*: mathematical figures
+- Ancient Greek musical notation
+- Grammatical inflectional tables
+- The Complutensian polyglot Bible
+- Chronological computation: Jerome
+- Manuscripts with neumes

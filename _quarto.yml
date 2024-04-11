@@ -4,10 +4,25 @@ project:
 website:
   title: "Neel Smith"
   navbar:
+    background: primary
+    search: true
     left:
       - href: index.qmd
         text: Home
+      - text: "Digital scholarship"
+        file: digschol/index.qmd
+      - text: "Other projects"
+        file: other/index.qmd        
       - about.qmd
+  sidebar:
+    - title: "Digital scholarship"
+      contents: 
+        - digschol/index.qmd
+
+    - title: "Other projects"
+      contents:
+        - other/index.qmd  
+
 
 format:
   html:
