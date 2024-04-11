@@ -2,7 +2,7 @@ project:
   type: website
 date: last-modified 
 website:
-  title: "Neel Smith"
+  title: "neelsmith"
   navbar:
     background: primary
     search: true
