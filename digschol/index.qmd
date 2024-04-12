@@ -23,11 +23,11 @@ All the code in the linked sections is in Julia.
 
 
 
-Citing texts
+[Citing texts](../cite/urns/cts.qmd)
 
-Citing objects
+[Citing objects](../cite/urns/cite2.qmd)
 
-Citing images
+[Citing images](../cite/urns/imgs.qmd)
 
 :::
 

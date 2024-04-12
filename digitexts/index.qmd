@@ -2,4 +2,9 @@
 title: "Digital texts: overview"
 ---
 
-Oveview
+Overview: what's different about computational study of texts in historical languages?
+
+- builds on central ideas of [citation](../cite/)
+- languages known to us only through written sources: essential to be explicit about the relation of [orthography](./orthography/) to language
+- the Indo-European and Semitic languages I work in are [morphologically rich](./parsing/): we need to take advantage of thats
+

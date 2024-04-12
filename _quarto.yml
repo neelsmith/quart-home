@@ -42,6 +42,14 @@ website:
         - digitexts/parsing/tabulae.qmd        
 
 
+    - title: "Citation with URNs"
+      contents:
+        - cite/urns/index.qmd
+        - text: "---"          
+        - cite/urns/cts.qmd
+        - cite/urns/cite2.qmd   
+        - cite/urns/imgs.qmd                   
+
 
     - title: "Personal"
       contents:

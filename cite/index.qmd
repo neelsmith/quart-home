@@ -2,4 +2,15 @@
 title: "Citation: overview"
 ---
 
-Overview
+Overview:
+
+- scholarship in the humanities starts from citation: we study specific, unique examples of cultural material
+- citation expresses a semantic model of different types of content
+
+The right technology for this is the [URN](../cite/).
+
+Much of my work with [digital texts](../digitexts/) considers texts contents in relation to the physical artifacts preserving the text. For this work, citation models:
+
+- passages of [texts](../cite/urns/cts.qmd) (CTS URNs)
+- physical [artifacts](../cite/urns/cite2.qmd) (CITE2 URNs)
+- documentary [images](../cite/urns/imgs.qmd) (CITE2 URNs, including extension for region of interest on an image)
