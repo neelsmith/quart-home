@@ -7,6 +7,6 @@ Read more about Morphological parsing
 And see some implementations:
 
 - [Kanónes](./kanones.qmd)
-- [Tabulae](.tabulae.qmd)
+- [Tabulae](./tabulae.qmd)
 - Luhot
 - Trmilli
