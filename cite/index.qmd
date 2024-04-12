@@ -7,7 +7,7 @@ Overview:
 - scholarship in the humanities starts from citation: we study specific, unique examples of cultural material
 - citation expresses a semantic model of different types of content
 
-The right technology for this is the [URN](../cite/).
+The right technology for this is the [URN](../cite/urns/).
 
 Much of my work with [digital texts](../digitexts/) considers texts contents in relation to the physical artifacts preserving the text. For this work, citation models:
 
