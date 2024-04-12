@@ -2,5 +2,10 @@
 title: Orthography
 ---
 
+
+
+We can't read a text until we understand how it is written!
+
+
 Read more about orthography: [https://neelsmith.quarto.pub/orthography/](https://neelsmith.quarto.pub/orthography/)
 
