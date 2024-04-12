@@ -54,6 +54,7 @@ website:
     - title: "Personal"
       contents:
         - personal/index.qmd
+        - text: "---"
         - personal/white.qmd
         - personal/juliagen.qmd
         
