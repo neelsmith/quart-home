@@ -19,9 +19,27 @@ website:
     - title: "Digital scholarship"
       contents: 
         - digschol/index.qmd
-     
-
         - text: "---"
+        - cite/index.qmd        
+        - digitexts/index.qmd
+        - hmt/index.qmd        
+
+
+    - title: "Orthography"
+      contents:
+        - digitexts/orthography/index.qmd
+        - text: "---"        
+        - digitexts/orthography/greek.qmd
+        - digitexts/orthography/latin.qmd
+        - digitexts/orthography/hebrew.qmd
+        - digitexts/orthography/lycian.qmd         
+
+    - title: "Morphological parsing"
+      contents:
+        - digitexts/parsing/index.qmd
+        - text: "---"        
+        - digitexts/parsing/kanones.qmd
+        - digitexts/parsing/tabulae.qmd        
 
 
 
@@ -30,18 +48,7 @@ website:
         - personal/index.qmd
         - personal/white.qmd
         - personal/juliagen.qmd
-    - title: "Orthography"
-      contents:
-        - digitexts/orthography/index.qmd
-        - digitexts/orthography/greek.qmd
-        - digitexts/orthography/latin.qmd
-        - digitexts/orthography/hebrew.qmd
-        - digitexts/orthography/lycian.qmd                        
-    - title: "Morphological parsing"
-      contents:
-        - digitexts/parsing/index.qmd
-        - digitexts/parsing/kanones.qmd
-        - digitexts/parsing/tabulae.qmd        
+        
 
 format:
   html:
