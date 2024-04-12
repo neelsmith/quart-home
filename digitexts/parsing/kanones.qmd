@@ -1,0 +1,6 @@
+---
+title: "Kanónes"
+---
+
+- implements the citable parser model
+- see the full site

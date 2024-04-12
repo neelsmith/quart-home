@@ -18,11 +18,11 @@ All the code in the linked sections is in Julia.
 
 Citation with URNs
 
-Citable texts
+Citing texts
 
-Citable objects
+Citing objects
 
-Citable images
+Citing images
 
 :::
 
@@ -34,17 +34,10 @@ Citable images
 ### Digital texts
 
 
-Orthography
+[Orthography](../digitexts/orthography/)
 
-Morphological parsing
+[Morphological parsing](../digitexts/parsing/)
 
-Kanónes
-
-Tabulae
-
-Luhot
-
-Trmilli
 
 
 
