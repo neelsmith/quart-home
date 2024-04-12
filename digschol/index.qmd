@@ -72,8 +72,9 @@ Finding Aristarchus
 
 ## Semantic editions of texts
 
-Manuscripts:
+Digital scholarly editions
 
+- images, physical artifacts, text content
 - how they're managed, served, sources
 
 
