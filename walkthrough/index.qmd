@@ -24,7 +24,7 @@ reading with Danielle Allen? (see [@allen2014] and [@allen2015])
 
 Need to refer to the images.
 
-## (1) Citation with URNs
+## Citation with URNs
 
 ### Citing texts
 
@@ -55,7 +55,7 @@ Happiness in engraving: urn:cite2:citeusnatarch:declindep.v1:Declaration_Engrav_
 Happiness in original: urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC@0.4765,0.1892,0.07596,0.01857
 
 
-## (2) Digital texts
+## Digital texts
 
 ### Orthography
 
