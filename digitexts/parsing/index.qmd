@@ -10,3 +10,10 @@ And see some implementations:
 - [Tabulae](./tabulae.qmd)
 - Luhot
 - Trmilli
+
+
+Quarrying lexica for vocabulary:
+
+- LSJMining.jl
+- LexiconMining.jl
+

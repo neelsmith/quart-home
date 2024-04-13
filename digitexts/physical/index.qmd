@@ -1,0 +1,7 @@
+---
+title: "Digital scholarly editions"
+---
+
+
+- images, physical artifacts, text content ("DSE triples")
+- how they're managed, served, sources

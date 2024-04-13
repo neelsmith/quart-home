@@ -4,6 +4,11 @@ title: "Neel Smith"
 
 
 
-I'm a soon-to-be emeritus professor at the College of the Holy Cross.  On this site, I'm starting to gather some of my digital scholarly work.
+I'm a soon-to-be emeritus professor at the College of the Holy Cross.  On this site, I'm beginning to gather some of the digital scholarly work I'm currently developing or maintaining.
+
+
+I am especially interested in studying ancient texts using computational approaches that take account of both the textual contents and the non-textual features of physical artifacts, such as page layout, organization of contents in tabular structures, graphic elements like mathematical figures, or non-textual notation such as musical notation.
+
+
 
 All pages on this site include a "Published" date showing when the page was last modified.

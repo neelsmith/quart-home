@@ -2,23 +2,28 @@
 title: "Digital scholarship"
 ---
 
-A selection of some work I'm currently developing or maintaining.
 
 
 
-## Concepts and code
 
 
-:::{.callout-note}
-Under each heading, links lead to futher information including narrative presentation of concepts. While these could be read sequentially like a book, I've chosen to present them together with documentation and tutorials using implementations of the concepts.
+:::{.callout-important}
+Under each heading, links lead to futher information including narrative presentation of concepts. While these could be read sequentially like a book, I've chosen to present them together with documentation and tutorials using implementations of the concepts, because I think that we can't adequately assess or critique ideas about digital scholarship running code.
 
 All code in the linked sections is in [Julia](../julia.qmd).
 :::
 
 
-Scholarship in the humanities depends on *citation* to identify its unique objects of study. This section presents work on technology-independent citation using URNs.
+## Concepts and code
 
-All analysis of digital texts must take account of *orthography* in order to perform the basic tasks like tokenization. This section 
+
+
+Scholarship in the humanities depends on **citation** to identify its unique objects of study. This section presents work on technology-independent citation using URNs.
+
+All analysis of **digital texts** must take account of how the text's writing system, or *orthography*, is digitally encoded, and how we can derive *citable digital editions* from sources in a variety of structured text formats. *Morphological parsing* is especially important for the morphologically rich languages I study.
+
+The **Homer Multitext project** has allowed me to apply these ideas to a significant corpus of manuscript material.
+
 
 :::: {.columns}
 
@@ -46,6 +51,7 @@ All analysis of digital texts must take account of *orthography* in order to per
 
 [Citable editions](../digitexts/editions/)
 
+[Editions of physical texts](../digitexts/physical/)
 
 [Morphological parsing](../digitexts/parsing/)
 
@@ -79,10 +85,11 @@ Finding Aristarchus
 
 ## Semantic editions of texts
 
-Digital scholarly editions
 
-- images, physical artifacts, text content
-- how they're managed, served, sources
+
+
+
+
 
 
 List some examples:
@@ -96,10 +103,6 @@ List some examples:
 - Documents with ancient Greek musical notation
 - Manuscripts with musical notation in neumes
 
-Lexica:
-
-- LSJMining.jl
-- LexiconMining.jl
 
 ## Odds and ends
 
