@@ -48,6 +48,14 @@ website:
         - digitexts/editions/markupreaders.qmd
         - digitexts/editions/editionbuilders.qmd
 
+    - title: "Physical texts"
+      contents:
+        - digitexts/physical/index.qmd
+        - text: "---"   
+        - digitexts/physical/dse.qmd
+        - digitexts/physical/images.qmd
+
+
 
     - title: "Citation with URNs"
       contents:

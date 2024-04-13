@@ -8,7 +8,7 @@ title: "Digital scholarship"
 
 
 :::{.callout-important}
-Under each heading, links lead to futher information including narrative presentation of concepts. While these could be read sequentially like a book, I've chosen to present them together with documentation and tutorials using implementations of the concepts, because I think that we can't adequately assess or critique ideas about digital scholarship running code.
+In the "Concepts and code" section, linked information includes a fuller narrative presentation of concepts. While these could be read sequentially like a book, I've chosen to present them together with documentation and tutorials using implementations of the concepts, because I don't belive that we can adequately assess or critique ideas about digital scholarship without running code.
 
 All code in the linked sections is in [Julia](../julia.qmd).
 :::
@@ -17,12 +17,9 @@ All code in the linked sections is in [Julia](../julia.qmd).
 ## Concepts and code
 
 
-
-Scholarship in the humanities depends on **citation** to identify its unique objects of study. This section presents work on technology-independent citation using URNs.
-
-All analysis of **digital texts** must take account of how the text's writing system, or *orthography*, is digitally encoded, and how we can derive *citable digital editions* from sources in a variety of structured text formats. *Morphological parsing* is especially important for the morphologically rich languages I study.
-
-The **Homer Multitext project** has allowed me to apply these ideas to a significant corpus of manuscript material.
+- Scholarship in the humanities depends on **citation** to identify its unique objects of study. This section presents work on technology-independent citation using URNs.
+- All analysis of **digital texts** must take account of how the text's writing system, or *orthography*, is digitally encoded, and how we can derive *citable digital editions* from sources in a variety of structured text formats. I'm interesting in digital *editions of physical texts* that encode both textual and non-textual contents. *Morphological parsing* is especially important for the morphologically rich languages I study.
+- The **Homer Multitext project** has allowed me to apply these ideas to a significant corpus of manuscript material.
 
 
 :::: {.columns}
@@ -49,9 +46,9 @@ The **Homer Multitext project** has allowed me to apply these ideas to a signifi
 
 [Orthography](../digitexts/orthography/)
 
-[Citable editions](../digitexts/editions/)
+[Citable texts](../digitexts/editions/)
 
-[Editions of physical texts](../digitexts/physical/)
+[Digital scholarly editions](../digitexts/physical/)
 
 [Morphological parsing](../digitexts/parsing/)
 
@@ -74,6 +71,8 @@ Manuscript layout
 
 Scholiastic language 
 
+Homeric language
+
 Finding Aristarchus
 
 :::
@@ -86,13 +85,9 @@ Finding Aristarchus
 ## Semantic editions of texts
 
 
+I use the term *semantic edition* for a digital edition that aims to encode the entire contents, textual and non-textual, of a physical document.
 
-
-
-
-
-
-List some examples:
+I list here examples of some of the non-textual contents I have worked with digitally:
 
 - Tools for multilingual reading: the Complutensian polyglot Bible
 - Datasets for geographic maps: Ptolemy, *Geography*: 
@@ -106,5 +101,8 @@ List some examples:
 
 ## Odds and ends
 
-- Vector alignments
+
+
+
+- [Utilities](../utils/) (Vector alignments)
 
