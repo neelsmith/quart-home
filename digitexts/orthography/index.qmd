@@ -4,7 +4,7 @@ title: Orthography
 
 
 
-We can't read a text until we understand how its writing system; we can't meaningfully work with a digital text until we understand how its writing system is encoded digitally.
+We can't read a text until we understand its writing system; we can't meaningfully work with a digital text until we understand how its writing system is encoded digitally.
 
 Problems:
 
