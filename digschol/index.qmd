@@ -10,7 +10,7 @@ title: "Digital scholarship"
 :::{.callout-important}
 In the "Concepts and code" section, linked information includes a fuller narrative presentation of concepts. While these could be read sequentially like a book, I've chosen to present them together with documentation and tutorials using implementations of the concepts, because I don't belive that we can adequately assess or critique ideas about digital scholarship without running code.
 
-All code in the linked sections is in [Julia](../julia.qmd).
+All code in the linked sections is in [Julia](../julia/).
 :::
 
 

@@ -12,7 +12,7 @@ website:
       - text: "Digital scholarship"
         file: digschol/index.qmd     
       - text: "Why Julia?"
-        file: julia.qmd
+        file: julia/index.qmd
       - about.qmd
 
   sidebar:
