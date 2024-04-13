@@ -41,6 +41,13 @@ website:
         - digitexts/parsing/kanones.qmd
         - digitexts/parsing/tabulae.qmd        
 
+    - title: "Citable editions"
+      contents:
+        - digitexts/editions/index.qmd
+        - text: "---"        
+        - digitexts/editions/markupreaders.qmd
+        - digitexts/editions/editionbuilders.qmd
+
 
     - title: "Citation with URNs"
       contents:

@@ -14,3 +14,4 @@ Much of my work with [digital texts](../digitexts/) considers texts contents in 
 - passages of [texts](../cite/urns/cts.qmd) (CTS URNs)
 - physical [artifacts](../cite/urns/cite2.qmd) (CITE2 URNs)
 - documentary [images](../cite/urns/imgs.qmd) (CITE2 URNs, including extension for region of interest on an image)
+

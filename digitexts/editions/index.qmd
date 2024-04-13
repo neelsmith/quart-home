@@ -1,0 +1,10 @@
+---
+title: "Building citable editions from structured text sources"
+---
+
+
+Two abstractions developed at HC MID:
+
+
+- *markup readers*, mapping structured sources to canonical CTS URNs
+- *edition builders*, to generate specified types of plain-text editions from a citable structured source
