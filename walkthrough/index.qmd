@@ -10,11 +10,17 @@ Pkg.add("CitableBase")
 Pkg.add("CitableText")
 Pkg.add("CitableObject")
 Pkg.add("CitableImage")
+
+Pkg.add("Orthography")
 ```
 
 ## Overview
 
 the American Declaration of Independence
+
+reading with Danielle Allen? @allen2014
+
+Need to refer to the images.
 
 ## (1) Citation with URNs
 
@@ -32,21 +38,26 @@ using CitableObject
 
 ### Citing images
 
+Source for images: https://www.archives.gov/founding-docs/downloads
 
 ```{julia}
-adoi_image1 = urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC")
+#| output: false
+adoi_orig = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC")
+adoi_engraving = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Engrav_Pg1of1_AC")
 ```
-
-Declaration_Engrav_Pg1of1_AC
-Declaration_Pg1of1_AC
-
 
 ## (2) Digital texts
 
-Orthography
+### Orthography
 
-Citable texts
+```{julia}
+#| output: false
+using Orthography
+ortho = simpleAscii()
+```
 
-DSE
+### Citable texts
+
+### DSE
 
 Morphology not included.
