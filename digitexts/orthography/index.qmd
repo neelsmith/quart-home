@@ -15,10 +15,10 @@ Problems:
 Concepts introduced and a functional interface in Julia defined in the `Orthography.jl` package.
 
 
-:::{.callout-note}
+:::{.callout-tip}
 
 ## Orthography: concepts and Julia package
 
-See a fuller presentation of `Orthography.jl` (concepts and code) [here](https://neelsmith.quarto.pub/orthography/).
+See [this site](https://neelsmith.quarto.pub/orthography/) for a fuller presentation of the concepts and code of `Orthography.jl`.
 
 :::
