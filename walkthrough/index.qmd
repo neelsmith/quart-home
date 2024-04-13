@@ -12,6 +12,8 @@ Pkg.add("CitableObject")
 Pkg.add("CitableImage")
 
 Pkg.add("Orthography")
+Pkg.add("CitableTeiReaders")
+Pkg.add("EditionBuilders")
 ```
 
 ## Overview
@@ -28,6 +30,7 @@ Need to refer to the images.
 
 ```{julia}
 using CitableBase, CitableText
+engraving_text = CtsUrn("urn:cts:citeusnatarch:foundingdocuments.declindep.engraving:")
 ```
 
 ### Citing objects
@@ -46,6 +49,12 @@ adoi_orig = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC
 adoi_engraving = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Engrav_Pg1of1_AC")
 ```
 
+Happiness in engraving: urn:cite2:citeusnatarch:declindep.v1:Declaration_Engrav_Pg1of1_AC@0.4672,0.1935,0.07188,0.01804
+
+
+Happiness in original: urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC@0.4765,0.1892,0.07596,0.01857
+
+
 ## (2) Digital texts
 
 ### Orthography
@@ -58,6 +67,27 @@ ortho = simpleAscii()
 
 ### Citable texts
 
+
+```{julia}
+using CitableTeiReaders
+engraving_xml = joinpath(pwd(), "adoi", "declaration_engraving.xml")
+engraving_corpus = readcitable(engraving_xml, engraving_text, TEIAnonblock, FileReader)
+```
+
+
+```{julia}
+using EditionBuilders
+builder = MidDiplomaticBuilder("Diplomatic edition buidler", "dipl")
+engraving_dipl = edited(builder, engraving_corpus)
+```
+MidDiplomaticBuilder
+
 ### DSE
+
+
+#### Services for images
+
+### DSE triples
+
 
 Morphology not included.

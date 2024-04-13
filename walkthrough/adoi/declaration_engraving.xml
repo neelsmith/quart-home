@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model  href="https://vault.tei-c.org/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0" type="application/xml"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+   <fileDesc>
+    <titleStmt>
+    <title>Declaration of Independence</title>
+     <editor>?? From Nat.Arch. site?</editor>
+    </titleStmt>
+    <publicationStmt>
+       <p>???</p>
+    </publicationStmt>
+    <sourceDesc>
+    <p>??</p>
+    </sourceDesc>
+  </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+    <ab n="1">Text of section 1.
+    </ab>
+    </body>
+</text>
+</TEI>
