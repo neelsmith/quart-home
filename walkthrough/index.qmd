@@ -18,7 +18,7 @@ Pkg.add("Orthography")
 
 the American Declaration of Independence
 
-reading with Danielle Allen? @allen2014
+reading with Danielle Allen? (see [@allen2014] and [@allen2015])
 
 Need to refer to the images.
 
