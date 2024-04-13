@@ -1,0 +1,52 @@
+---
+title: "A walkthrough: the American Declaration of Independence"
+---
+
+```{julia}
+#| output: false
+#| echo: false
+using Pkg
+Pkg.add("CitableBase")
+Pkg.add("CitableText")
+Pkg.add("CitableObject")
+Pkg.add("CitableImage")
+```
+
+## Overview
+
+the American Declaration of Independence
+
+## (1) Citation with URNs
+
+### Citing texts
+
+```{julia}
+using CitableBase, CitableText
+```
+
+### Citing objects
+
+```{julia}
+using CitableObject
+```
+
+### Citing images
+
+
+```{julia}
+adoi_image1 = urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC")
+```
+
+Declaration_Engrav_Pg1of1_AC
+Declaration_Pg1of1_AC
+
+
+## (2) Digital texts
+
+Orthography
+
+Citable texts
+
+DSE
+
+Morphology not included.

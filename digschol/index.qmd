@@ -19,12 +19,17 @@ All code in the linked sections is in [Julia](../julia/).
 
 - Scholarship in the humanities depends on **citation** to identify its unique objects of study. This section presents work on technology-independent citation using URNs.
 - All analysis of **digital texts** must take account of how the text's writing system, or *orthography*, is digitally encoded, and how we can derive *citable digital editions* from sources in a variety of structured text formats. I'm interesting in digital *editions of physical texts* that encode both textual and non-textual contents. *Morphological parsing* is especially important for the morphologically rich languages I study.
-- The **Homer Multitext project** has allowed me to apply these ideas to a significant corpus of manuscript material.
 
 
 :::: {.columns}
 
-::: {.column width="25%"}
+::: {.column width="5%"}
+<!-- empty column to create gap -->
+:::
+
+
+
+::: {.column width="40%"}
 ### [Citation](../cite/)
 
 
@@ -41,7 +46,7 @@ All code in the linked sections is in [Julia](../julia/).
 <!-- empty column to create gap -->
 :::
 
-::: {.column width="25%"}
+::: {.column width="40%"}
 ### [Digital texts](../digitexts/)
 
 [Orthography](../digitexts/orthography/)
@@ -58,28 +63,23 @@ All code in the linked sections is in [Julia](../julia/).
 
 :::
 
-::: {.column width="5%"}
-<!-- empty column to create gap -->
-:::
 
-::: {.column width="25%"}
-### [The Homer Multitext project](../hmt/)
-
-The HMT archive
-
-Manuscript layout
-
-Scholiastic language 
-
-Homeric language
-
-Finding Aristarchus
-
-:::
 
 ::::
 
 
+### A simple illustration: the American Declaration of Independence
+
+- A brief notebook using Julia to apply the ideas about citation and digital texts to [the American Declaration of Independence](../walkthrough/).
+
+##  The [Homer Mulitext project](../hmt/)
+
+
+- The HMT archive
+- Manuscript layout
+- Scholiastic language 
+- Homeric language
+- Finding Aristarchus
 
 
 ## Semantic editions of texts

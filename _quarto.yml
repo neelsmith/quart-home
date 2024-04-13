@@ -22,7 +22,12 @@ website:
         - text: "---"
         - cite/index.qmd        
         - digitexts/index.qmd
+        - walkthrough/index.qmd
+        - text: "---"
         - hmt/index.qmd        
+        - semantic-editions/index.qmd             
+        
+
 
 
     - title: "Orthography"
