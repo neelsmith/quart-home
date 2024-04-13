@@ -70,8 +70,8 @@ ortho = simpleAscii()
 
 ```{julia}
 using CitableTeiReaders
-engraving_xml = joinpath(pwd(), "adoi", "declaration_engraving.xml")
-engraving_corpus = readcitable(engraving_xml, engraving_text, TEIAnonblock, FileReader)
+engraving_xml = "https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration_engraving.xml"
+engraving_corpus = readcitable(engraving_xml, engraving_text, TEIAnonblock, UrlReader)
 ```
 
 
