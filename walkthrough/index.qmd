@@ -2,41 +2,86 @@
 title: "A walkthrough: the American Declaration of Independence"
 ---
 
+
 ```{julia}
 #| output: false
 #| echo: false
-using Pkg
-Pkg.add("CitableBase")
-Pkg.add("CitableText")
-Pkg.add("CitableObject")
-Pkg.add("CitableImage")
+fullinfo = false
 
-Pkg.add("Orthography")
-Pkg.add("CitableTeiReaders")
-Pkg.add("EditionBuilders")
+
+# Set up Julia environment:
+using Pkg
+pkglist = [
+    "CitableBase", 
+    "CitableText", "CitableObject", "CitableImage",
+    "Orthography", "CitableTeiReaders", "EditionBuilders"
+]
+for p in pkglist
+    Pkg.add(p)    
+end
+
+using Markdown
+
+if fullinfo
+    allpkgs = map(collect(keys(Pkg.dependencies()))) do uukey
+        Pkg.dependencies()[uukey]
+    end
+    pkglistinfo = filter(pi -> pi.name in pkglist, allpkgs) 
+    pkglist_md = map(p -> string("- ", p.name, " ", p.version), pkglistinfo) |> sort
+else
+    pkglist_md = "TBA"
+end
 ```
+
+
+:::{.callout-tip collapse="true"}
+`{julia} string("## See package versions","\n\n", "This page was compiled with the following  versions of the packages illustrated here:", "\n\n", join(pkglist_md,"\n")) |> Markdown.parse`
+:::
+
+
 
 ## Overview
 
-the American Declaration of Independence
 
-reading with Danielle Allen? (see [@allen2014] and [@allen2015])
+The historian and classicist Danielle offers a new interpretation of the American Declaration of Independence that is literally based on a new reading: she punctuates the text differently from most printed editions. (See her book [@allen2014] and the subsequent manuscript available from the Institute for Advanced Study [@allen2015].)
 
-Need to refer to the images.
+The U.S. National Archives has published freely available, high-resolution images of both the original signed parchment, and a widely used engraved reproduction. (See the presentation of the [Declaration of Independence from the National Archives](https://www.archives.gov/founding-docs/declaration).) 
+
+This page briefly illustrates how we could apply the Julia packages for citation and for working with digital texts to the problem of reading the text of the Declaration.
+
+
+
 
 ## Citation with URNs
 
 ### Citing texts
 
+
+:::{.callout-tip}
+## Learn more about [citation with `CtsUrn`s](../cite/urns/cts.qmd) 
+:::
+
+Cite the text of the original and the engraving using `CtsUrn`s with different version identifiers.
+
+
 ```{julia}
 using CitableBase, CitableText
 engraving_text = CtsUrn("urn:cts:citeusnatarch:foundingdocuments.declindep.engraving:")
+original_text = CtsUrn("urn:cts:citeusnatarch:foundingdocuments.declindep.original:")
 ```
 
 ### Citing objects
 
+:::{.callout-tip}
+## Learn more about [citation with `Cite2Urn`s](../cite/urns/cite2.qmd) 
+:::
+
+Identify a collection of pages (front and back) for the original and for the engraving using `Cite2Urn`s.
+
 ```{julia}
 using CitableObject
+engraving_pages = Cite2Urn("urn:cite2:citeusnatarch:declindep.engraving:")
+original_pages = Cite2Urn("urn:cite2:citeusnatarch:declindep.original:")
 ```
 
 ### Citing images
@@ -45,19 +90,27 @@ Source for images: https://www.archives.gov/founding-docs/downloads
 
 ```{julia}
 #| output: false
-adoi_orig = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC")
-adoi_engraving = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Engrav_Pg1of1_AC")
+original_img1 = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC")
+engraving_img1 = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Engrav_Pg1of1_AC")
 ```
 
-Happiness in engraving: urn:cite2:citeusnatarch:declindep.v1:Declaration_Engrav_Pg1of1_AC@0.4672,0.1935,0.07188,0.01804
+Use a tool like the Homer Multitext project's Image Citation Tool to find a specific region of interest and cite it with a URN. Here we save references to the region of two images illustrating the word "Happiness."
 
+```{julia}
+happiness_engraving = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Engrav_Pg1of1_AC@0.4672,0.1935,0.07188,0.01804")
+happiness_original = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC@0.4765,0.1892,0.07596,0.01857")
+```
 
-Happiness in original: urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC@0.4765,0.1892,0.07596,0.01857
 
 
 ## Digital texts
 
 ### Orthography
+
+:::{.callout-tip}
+## Learn more about [orthography](../digitexts/orthography/) 
+:::
+
 
 ```{julia}
 #| output: false
@@ -66,7 +119,12 @@ ortho = simpleAscii()
 ```
 
 ### Citable texts
+:::{.callout-tip}
+## Learn more about creating citable texts
 
+- [readers](../digitexts/editions/markupreaders.qmd)
+- [builders](../digitexts/editions/editionbuilders.qmd)
+:::
 
 ```{julia}
 using CitableTeiReaders
@@ -80,10 +138,9 @@ using EditionBuilders
 builder = MidDiplomaticBuilder("Diplomatic edition buidler", "dipl")
 engraving_dipl = edited(builder, engraving_corpus)
 ```
-MidDiplomaticBuilder
+
 
 ### DSE
-
 
 #### Services for images
 
