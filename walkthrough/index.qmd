@@ -2,11 +2,10 @@
 title: "A walkthrough: the American Declaration of Independence"
 ---
 
-
 ```{julia}
 #| output: false
 #| echo: false
-fullinfo = false
+fullinfo = true
 
 
 # Set up Julia environment:
@@ -33,36 +32,37 @@ else
 end
 ```
 
-
-:::{.callout-tip collapse="true"}
+::: {.callout-tip collapse="true"}
 `{julia} string("## See package versions","\n\n", "This page was compiled with the following  versions of the packages illustrated here:", "\n\n", join(pkglist_md,"\n")) |> Markdown.parse`
 :::
 
+## Background and sources
 
-
-## Overview
-
-
-The historian and classicist Danielle offers a new interpretation of the American Declaration of Independence that is literally based on a new reading: she punctuates the text differently from most printed editions. (See her book [@allen2014] and the subsequent manuscript available from the Institute for Advanced Study [@allen2015].)
-
-The U.S. National Archives has published freely available, high-resolution images of both the original signed parchment, and a widely used engraved reproduction. (See the presentation of the [Declaration of Independence from the National Archives](https://www.archives.gov/founding-docs/declaration).) 
+The historian and classicist Danielle Allen offers a new interpretation of the American Declaration of Independence that is literally based on a new reading: she punctuates the text differently from most printed editions. (See her book [@allen2014] and the subsequent manuscript available from the Institute for Advanced Study [@allen2015].)
 
 This page briefly illustrates how we could apply the Julia packages for citation and for working with digital texts to the problem of reading the text of the Declaration.
 
+### Sources
 
+The U.S. National Archives has published freely available, high-resolution images of both the original signed parchment, and a widely used engraved reproduction. (See the presentation of the [Declaration of Independence from the National Archives](https://www.archives.gov/founding-docs/declaration), with links to downloadable images.) These images have been added to the Homer Multitext project's citable image service.
 
+Two transcriptions of the text in TEI-compliant XML are included in this site's github repository:
+
+-   [transcription 1](https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration_engraving.xml): engraving, from NA <https://www.archives.gov/founding-docs/declaration-transcript>
+
+-   [transcription 2](https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration_original.xml): original
+
+The relations of text, pages and documentary image are documented in a delimited-text file in this site's github repository.
 
 ## Citation with URNs
 
 ### Citing texts
 
-
-:::{.callout-tip}
-## Learn more about [citation with `CtsUrn`s](../cite/urns/cts.qmd) 
+::: callout-tip
+## Learn more about [citation with `CtsUrn`s](../cite/urns/cts.qmd)
 :::
 
 Cite the text of the original and the engraving using `CtsUrn`s with different version identifiers.
-
 
 ```{julia}
 using CitableBase, CitableText
@@ -72,8 +72,8 @@ original_text = CtsUrn("urn:cts:citeusnatarch:foundingdocuments.declindep.origin
 
 ### Citing objects
 
-:::{.callout-tip}
-## Learn more about [citation with `Cite2Urn`s](../cite/urns/cite2.qmd) 
+::: callout-tip
+## Learn more about [citation with `Cite2Urn`s](../cite/urns/cite2.qmd)
 :::
 
 Identify a collection of pages (front and back) for the original and for the engraving using `Cite2Urn`s.
@@ -101,16 +101,13 @@ happiness_engraving = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration
 happiness_original = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC@0.4765,0.1892,0.07596,0.01857")
 ```
 
-
-
 ## Digital texts
 
 ### Orthography
 
-:::{.callout-tip}
-## Learn more about [orthography](../digitexts/orthography/) 
+::: callout-tip
+## Learn more about [orthography](../digitexts/orthography/)
 :::
-
 
 ```{julia}
 #| output: false
@@ -119,11 +116,12 @@ ortho = simpleAscii()
 ```
 
 ### Citable texts
-:::{.callout-tip}
+
+::: callout-tip
 ## Learn more about creating citable texts
 
-- [readers](../digitexts/editions/markupreaders.qmd)
-- [builders](../digitexts/editions/editionbuilders.qmd)
+-   [readers](../digitexts/editions/markupreaders.qmd)
+-   [builders](../digitexts/editions/editionbuilders.qmd)
 :::
 
 ```{julia}
@@ -132,19 +130,16 @@ engraving_xml = "https://raw.githubusercontent.com/neelsmith/quart-home/main/wal
 engraving_corpus = readcitable(engraving_xml, engraving_text, TEIAnonblock, UrlReader)
 ```
 
-
 ```{julia}
 using EditionBuilders
 builder = MidDiplomaticBuilder("Diplomatic edition buidler", "dipl")
 engraving_dipl = edited(builder, engraving_corpus)
 ```
 
-
 ### DSE
 
 #### Services for images
 
 ### DSE triples
-
 
 Morphology not included.
