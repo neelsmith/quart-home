@@ -2,44 +2,30 @@
 title: "Digital scholarship"
 ---
 
-
-
-
-
-
-:::{.callout-important}
+::: callout-important
 In the "Concepts and code" section, linked information includes fuller narrative presentations of concepts. While these sections could be read sequentially like a book, I've chosen to present them together with documentation and tutorials using implementations of the concepts, because I don't believe that we can adequately assess or critique ideas about digital scholarship without running code.
 
 All code in the linked sections is in [Julia](../julia/).
 :::
 
+## Digital scholarship: concepts and code
 
-## Concepts and code
+-   Scholarship in the humanities depends on **citation** to identify its unique objects of study. This section presents work on technology-independent citation using URNs.
+-   All analysis of **digital texts** must take account of how the text's writing system, or *orthography*, is digitally encoded, and how we can derive *citable digital editions* from sources in a variety of structured text formats. I'm interesting in digital *scholarly editions of physical texts* that encode both textual and non-textual contents. *Morphological parsing* is especially important for the morphologically rich languages I study.
 
-
-- Scholarship in the humanities depends on **citation** to identify its unique objects of study. This section presents work on technology-independent citation using URNs.
-- All analysis of **digital texts** must take account of how the text's writing system, or *orthography*, is digitally encoded, and how we can derive *citable digital editions* from sources in a variety of structured text formats. I'm interesting in digital *scholarly editions of physical texts* that encode both textual and non-textual contents. *Morphological parsing* is especially important for the morphologically rich languages I study.
-
-
-:::: {.columns}
-
+::: columns
 ::: {.column width="5%"}
 <!-- empty column to create gap -->
 :::
 
-
-
 ::: {.column width="40%"}
 ### [Citation](../cite/)
-
-
 
 [Citing texts](../cite/urns/cts.qmd)
 
 [Citing objects](../cite/urns/cite2.qmd)
 
 [Citing images](../cite/urns/imgs.qmd)
-
 :::
 
 ::: {.column width="5%"}
@@ -56,53 +42,36 @@ All code in the linked sections is in [Julia](../julia/).
 [Digital scholarly editions](../digitexts/physical/)
 
 [Morphological parsing](../digitexts/parsing/)
-
-
-
-
-
 :::
-
-
-
-::::
-
+:::
 
 ### A simple illustration: the American Declaration of Independence
 
-- A brief notebook using Julia to apply ideas about citation and digital texts to [the American Declaration of Independence](../walkthrough/).
+-   A brief notebook using Julia to apply ideas about citation and digital texts to [the American Declaration of Independence](../walkthrough/).
 
-##  The [Homer Mulitext project](../hmt/)
+## The [Homer Mulitext project](../hmt/)
 
-
-- The HMT archive
-- Manuscript layout
-- Scholiastic language 
-- Homeric language
-- Finding Aristarchus
-
+-   The HMT archive
+-   Manuscript layout
+-   Scholiastic language
+-   Homeric language
+-   Finding Aristarchus
 
 ## Semantic editions of texts
-
 
 I use the term *semantic edition* for a digital edition that aims to encode the entire contents, textual and non-textual, of a physical document.
 
 I list here examples of some of the non-textual contents I have worked with digitally:
 
-- Tools for multilingual reading: the Complutensian polyglot Bible
-- Datasets for geographic maps: Ptolemy, *Geography*: 
-- Precomputed mathematical functions: Ptolemy, *Almagest*: 
-- Proofs with mathematical figures: Euclid, *Geometry*; Archimedes, *Spiral Lines*
-- Grammatical inflectional tables
-- Chronological computation: Jerome's *Chronicles*
-- Documents with ancient Greek musical notation
-- Manuscripts with musical notation in neumes
-
+-   Tools for multilingual reading: the Complutensian polyglot Bible
+-   Datasets for geographic maps: Ptolemy, *Geography*:
+-   Precomputed mathematical functions: Ptolemy, *Almagest*:
+-   Proofs with mathematical figures: Euclid, *Geometry*; Archimedes, *Spiral Lines*
+-   Grammatical inflectional tables
+-   Chronological computation: Jerome's *Chronicles*
+-   Documents with ancient Greek musical notation
+-   Manuscripts with musical notation in neumes
 
 ## Odds and ends
 
-
-
-
-- [Utilities](../utils/) (Vector alignments)
-
+-   [Utilities](../utils/) (Vector alignments)
