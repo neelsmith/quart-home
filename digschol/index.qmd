@@ -69,7 +69,7 @@ I list here examples of some of the non-textual contents I have worked with digi
 -   Proofs with mathematical figures: Euclid, *Geometry*; Archimedes, *Spiral Lines*
 -   Grammatical inflectional tables
 -   Chronological computation: Jerome's *Chronicles*
--   Documents with ancient Greek musical notation
+-   Documents with ancient Greek musical notation (including manuscripts of Alypius)
 -   Manuscripts with musical notation in neumes
 
 ## Odds and ends
