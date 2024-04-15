@@ -44,7 +44,7 @@ This page briefly illustrates how we could apply the Julia packages for citation
 
 ### Sources
 
-The U.S. National Archives has published freely available, high-resolution images of both the original signed parchment, and a widely used engraved reproduction. (See the presentation of the [Declaration of Independence from the National Archives](https://www.archives.gov/founding-docs/declaration), with links to downloadable images.) These images have been added to the Homer Multitext project's citable image service.
+The U.S. National Archives has published freely available, high-resolution images of both the original signed parchment, and a widely used engraved reproduction. (See the presentation of the Declaration of Independence from the [National Archives](https://www.archives.gov/founding-docs/declaration), with links to [downloadable images](https://www.archives.gov/founding-docs/downloads)) These images have been added to the Homer Multitext project's citable image service.
 
 Two transcriptions of the text in TEI-compliant XML are included in this site's github repository:
 
