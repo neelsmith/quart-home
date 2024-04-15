@@ -2,6 +2,14 @@
 title: "Citation: overview"
 ---
 
+:::{.callout-caution}
+## Content incomplete
+
+This page will fundamental ideas about scholarly citation using digital resources.
+:::
+
+
+
 Overview:
 
 - scholarship in the humanities starts from citation: we study specific, unique examples of cultural material

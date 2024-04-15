@@ -2,4 +2,9 @@
 title: "Semantic editions"
 ---
 
-TBA
+
+:::{.callout-caution}
+## Content incomplete
+
+This page will introduce projects creating semantic editions of a variety of texts.
+:::

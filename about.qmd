@@ -3,6 +3,9 @@ title: "About"
 ---
 
 
+
+
+
 All the work on this site has grown out of stimulating collaborations.
 
 
@@ -12,6 +15,15 @@ Main projects:
 - the Turkish-American excavations at Hacımusalar
 - the Homer Multitext project
 - the Holy Cross Manuscripts, Inscriptions and Documents Club
+
+
+
+:::{.callout-caution}
+## Content incomplete
+
+This page will include a formal dedication.
+:::
+
 
 > A dedication
 >
