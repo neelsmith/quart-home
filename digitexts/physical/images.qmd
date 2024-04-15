@@ -10,4 +10,4 @@ This page will introduce working with services for citable images.
 :::
 
 
-- CitableImage.jl
+- CitableImage.jl:  see [documentation](https://cite-architecture.github.io/CitableImage.jl/stable/)

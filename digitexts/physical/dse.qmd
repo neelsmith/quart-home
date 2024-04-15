@@ -11,4 +11,4 @@ This page will introduce a model of the relations of artifacts, images and texts
 
 
 
-- CitablePhysicalText.jl
+- CitablePhysicalText.jl: see [documentation](https://cite-architecture.github.io/CitablePhysicalText.jl/stable/)
