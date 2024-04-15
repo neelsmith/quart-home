@@ -18,7 +18,7 @@ All code in the linked sections is in [Julia](../julia/).
 
 
 - Scholarship in the humanities depends on **citation** to identify its unique objects of study. This section presents work on technology-independent citation using URNs.
-- All analysis of **digital texts** must take account of how the text's writing system, or *orthography*, is digitally encoded, and how we can derive *citable digital editions* from sources in a variety of structured text formats. I'm interesting in digital *editions of physical texts* that encode both textual and non-textual contents. *Morphological parsing* is especially important for the morphologically rich languages I study.
+- All analysis of **digital texts** must take account of how the text's writing system, or *orthography*, is digitally encoded, and how we can derive *citable digital editions* from sources in a variety of structured text formats. I'm interesting in digital *scholarly editions of physical texts* that encode both textual and non-textual contents. *Morphological parsing* is especially important for the morphologically rich languages I study.
 
 
 :::: {.columns}
