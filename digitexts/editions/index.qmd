@@ -2,9 +2,9 @@
 title: "Building citable editions from structured text sources"
 ---
 
+Two abstractions developed at HC MID allow us to go from multivalent sources to computationally analyzable univocal editions in two steps:
 
-Two abstractions developed at HC MID:
 
+1. *make structured sources citable*: map structured sources to canonical CTS URNs.
+2. *edition builders*:  given a citable structured source, compose specified types of editions that can be computationally analyzed without any further structure than citation by URN.
 
-- *markup readers*, mapping structured sources to canonical CTS URNs
-- *edition builders*, to generate specified types of plain-text editions from a citable structured source
