@@ -6,13 +6,13 @@ schematypens="http://relaxng.org/ns/structure/1.0" type="application/xml"?>
    <fileDesc>
     <titleStmt>
     <title>Declaration of Independence</title>
-     <editor>?? From Nat.Arch. site?</editor>
+     <editor>Transcriber not identified</editor>
     </titleStmt>
     <publicationStmt>
-       <p>???</p>
+       <p>Published on line by US National Archives with no restrictions</p>
     </publicationStmt>
     <sourceDesc>
-    <p>??</p>
+    <p>https://www.archives.gov/founding-docs/declaration-transcript</p>
     </sourceDesc>
   </fileDesc>
   </teiHeader>
