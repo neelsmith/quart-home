@@ -70,7 +70,7 @@ All code in the linked sections is in [Julia](../julia/).
 
 ### A simple illustration: the American Declaration of Independence
 
-- A brief notebook using Julia to apply the ideas about citation and digital texts to [the American Declaration of Independence](../walkthrough/).
+- A brief notebook using Julia to apply ideas about citation and digital texts to [the American Declaration of Independence](../walkthrough/).
 
 ##  The [Homer Mulitext project](../hmt/)
 
