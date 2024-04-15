@@ -6,3 +6,6 @@ title: "Edition builders"
 Build specified editions (diplomatic, normalized in various ways...)
 
 Text content can be directly analyzed without further knowledge of the source documents format: the only structure we need to recognize is the citable passage identified by CTS URN.
+
+
+See the [documentation for the `EditionBuilders` package](https://hcmid.github.io/EditionBuilders.jl/stable/).

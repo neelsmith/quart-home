@@ -13,7 +13,9 @@ using Pkg
 pkglist = [
     "CitableBase", 
     "CitableText", "CitableObject", "CitableImage",
-    "Orthography", "CitableTeiReaders", "EditionBuilders"
+    "Orthography", "CitableTeiReaders", "EditionBuilders",
+
+    #"VectorAlignments"
 ]
 for p in pkglist
     Pkg.add(p)    
@@ -44,23 +46,15 @@ This page briefly illustrates how we could apply the Julia packages for citation
 
 ### Sources
 
-The U.S. National Archives has published freely available, high-resolution images of both the original signed parchment, and a widely used engraved reproduction. (See the presentation of the Declaration of Independence from the [National Archives](https://www.archives.gov/founding-docs/declaration), with links to [downloadable images](https://www.archives.gov/founding-docs/downloads)) These images have been added to the Homer Multitext project's citable image service.
-
-Two transcriptions of the text in TEI-compliant XML are included in this site's github repository:
-
--   [transcription 1](https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration_engraving.xml): engraving, from NA <https://www.archives.gov/founding-docs/declaration-transcript>
-
--   [transcription 2](https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration_original.xml): original
-
-The relations of text, pages and documentary image are documented in a delimited-text file in this site's github repository.
+1.  The U.S. National Archives has published freely available, high-resolution images of both the original signed parchment, and a widely used engraved reproduction. (See the presentation of the Declaration of Independence from the [National Archives](https://www.archives.gov/founding-docs/declaration), with links to [downloadable images](https://www.archives.gov/founding-docs/downloads)) These images have been added to the Homer Multitext project's citable image service.
+2.  Two transcriptions of the text in TEI-compliant XML are included in this site's github repository:
+    -   [transcription 1](https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration_engraving.xml): a transcription of the text of the engraving, taken from [this page](https://www.archives.gov/founding-docs/declaration-transcript) of the National Archives web site
+    -   [transcription 2](https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration_original.xml): a transcription of the text from the image of the original parchment
+3.  The relations of text, pages and documentary image are documented in a delimited-text file in this site's github repository [here](https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration.cex).
 
 ## Citation with URNs
 
 ### Citing texts
-
-::: callout-tip
-## Learn more about [citation with `CtsUrn`s](../cite/urns/cts.qmd)
-:::
 
 Cite the text of the original and the engraving using `CtsUrn`s with different version identifiers.
 
@@ -70,11 +64,11 @@ engraving_text = CtsUrn("urn:cts:citeusnatarch:foundingdocuments.declindep.engra
 original_text = CtsUrn("urn:cts:citeusnatarch:foundingdocuments.declindep.original:")
 ```
 
-### Citing objects
-
 ::: callout-tip
-## Learn more about [citation with `Cite2Urn`s](../cite/urns/cite2.qmd)
+## Learn more about [citation with `CtsUrn`s](../cite/urns/cts.qmd)
 :::
+
+### Citing objects
 
 Identify a collection of pages (front and back) for the original and for the engraving using `Cite2Urn`s.
 
@@ -84,9 +78,13 @@ engraving_pages = Cite2Urn("urn:cite2:citeusnatarch:declindep.engraving:")
 original_pages = Cite2Urn("urn:cite2:citeusnatarch:declindep.original:")
 ```
 
+::: callout-tip
+## Learn more about [citation with `Cite2Urn`s](../cite/urns/cite2.qmd)
+:::
+
 ### Citing images
 
-Source for images: https://www.archives.gov/founding-docs/downloads
+Identify documentary images for the front of the parchment and the first page of the engraving using `Cite2Urn`s.
 
 ```{julia}
 #| output: false
@@ -94,20 +92,11 @@ original_img1 = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of
 engraving_img1 = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Engrav_Pg1of1_AC")
 ```
 
-Use a tool like the Homer Multitext project's Image Citation Tool to find a specific region of interest and cite it with a URN. Here we save references to the region of two images illustrating the word "Happiness."
-
-```{julia}
-happiness_engraving = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Engrav_Pg1of1_AC@0.4672,0.1935,0.07188,0.01804")
-happiness_original = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC@0.4765,0.1892,0.07596,0.01857")
-```
-
 ## Digital texts
 
 ### Orthography
 
-::: callout-tip
-## Learn more about [orthography](../digitexts/orthography/)
-:::
+Define an orthographic system for the texts we will read.
 
 ```{julia}
 #| output: false
@@ -115,20 +104,21 @@ using Orthography
 ortho = simpleAscii()
 ```
 
-### Citable texts
-
 ::: callout-tip
-## Learn more about creating citable texts
-
--   [readers](../digitexts/editions/markupreaders.qmd)
--   [builders](../digitexts/editions/editionbuilders.qmd)
+## Learn more about [orthography](../digitexts/orthography/)
 :::
+
+### Create citable texts
+
+Read the XML source from a URL, and make the marked up content accessible through canonical citation with the `CitableTeiReaders` package.
 
 ```{julia}
 using CitableTeiReaders
-engraving_xml = "https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration_engraving.xml"
-engraving_corpus = readcitable(engraving_xml, engraving_text, TEIAnonblock, UrlReader)
+engraving_url = "https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration_engraving.xml"
+engraving_corpus = readcitable(engraving_url, engraving_text, TEIAnonblock, UrlReader)
 ```
+
+Compose a univocal diplomatic edition from the multivalent XML document.
 
 ```{julia}
 using EditionBuilders
@@ -136,10 +126,41 @@ builder = MidDiplomaticBuilder("Diplomatic edition buidler", "dipl")
 engraving_dipl = edited(builder, engraving_corpus)
 ```
 
-### DSE
+::: callout-tip
+## Learn more about creating citable texts
+
+-   [citable markup](../digitexts/editions/markupreaders.qmd)
+-   [edition builders](../digitexts/editions/editionbuilders.qmd)
+:::
+
+### A full digital scholarly edition
 
 #### Services for images
 
-### DSE triples
+- configure HMT image service
 
-Morphology not included.
+
+
+
+### Relations of text, artifact and image
+
+
+
+
+## Application: explore differences in the texts visually
+
+- computationally identify sections where texts differ
+- show image of section, linked to ICT
+- manually use the Homer Multitext project's Image Citation Tool to zoom in to  more specific region of interest and cite it with a URN. Here we save references to the region of two images illustrating the word "Happiness."
+
+```{julia}
+happiness_engraving = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Engrav_Pg1of1_AC@0.4672,0.1935,0.07188,0.01804")
+happiness_original = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC@0.4765,0.1892,0.07596,0.01857")
+```
+
+
+## Application: organize differences in the texts as a sequence alignment
+
+```{julia}
+# using VectorAlignments
+```

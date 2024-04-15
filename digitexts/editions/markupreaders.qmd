@@ -1,5 +1,7 @@
 ---
-title: "Markup readers"
+title: "Citable markup"
 ---
 
-Get a better title for this
+Make the contents of a structured text source accessible using canonical citation.
+
+See the [documentation of the `CitableTeiReaders` package](https://hcmid.github.io/CitableTeiReaders.jl/stable/).
