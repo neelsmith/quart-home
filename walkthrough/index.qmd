@@ -121,6 +121,9 @@ Read the XML source from a URL, and make the marked-up content accessible throug
 using CitableTeiReaders
 engraving_url = "https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration_engraving.xml"
 engraving_corpus = readcitable(engraving_url, engraving_text, TEIAnonblock, UrlReader)
+
+original_url = "https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration_original.xml"
+original_corpus = readcitable(original_url, engraving_text, TEIAnonblock, UrlReader)
 ```
 
 Compose a univocal diplomatic edition from the multivalent XML document with the `EditionBuilders` package.
@@ -130,6 +133,7 @@ Compose a univocal diplomatic edition from the multivalent XML document with the
 using EditionBuilders
 builder = MidDiplomaticBuilder("Diplomatic edition buidler", "dipl")
 engraving_dipl = edited(builder, engraving_corpus)
+original_dipl = edited(builder, original_corpus)
 ```
 
 ::: callout-tip
