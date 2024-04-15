@@ -15,6 +15,7 @@ pkglist = [
     "CitableText", "CitableObject", "CitableImage",
 
     "Orthography", "CitableTeiReaders", "EditionBuilders",
+    "CitablePhysicalText",
 
     "VectorAlignments"
 ]
@@ -36,7 +37,7 @@ end
 ```
 
 ::: {.callout-tip collapse="true"}
-`{julia} string("## See package versions","\n\n", "This page was compiled with the following  versions of the packages illustrated here:", "\n\n", join(pkglist_md,"\n")) |> Markdown.parse`
+`{julia} string("## See versions of Julia packages","\n\n", "This page was compiled with the following  versions of the packages illustrated here:", "\n\n", join(pkglist_md,"\n")) |> Markdown.parse`
 :::
 
 ## Background and sources
@@ -136,15 +137,15 @@ engraving_dipl = edited(builder, engraving_corpus)
 
 ### A full digital scholarly edition
 
+### Relations of text, artifact and image
+
+```{julia}
+using CitablePhysicalText
+```
+
 #### Services for images
 
 - configure HMT image service
-
-
-
-
-### Relations of text, artifact and image
-
 
 
 
@@ -164,4 +165,6 @@ happiness_original = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_
 
 ```{julia}
 using VectorAlignments
+delimited_url = "https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration.cex"
+dsetriples = fromcex(delimited_url, DSECollection, UrlReader)
 ```
