@@ -37,7 +37,7 @@ end
 ```
 
 ::: {.callout-tip collapse="true"}
-`{julia} string("## See versions of Julia packages","\n\n", "This page was compiled with the following  versions of the packages illustrated here:", "\n\n", join(pkglist_md,"\n")) |> Markdown.parse`
+`{julia} string("## See versions of Julia packages used on this page","\n\n", "This page was compiled with the following  versions of the packages illustrated here:", "\n\n", join(pkglist_md,"\n")) |> Markdown.parse`
 :::
 
 ## Background and sources
@@ -61,6 +61,7 @@ This page briefly illustrates how we could apply the Julia packages for citation
 Cite the text of the original and the engraving using `CtsUrn`s with different version identifiers.
 
 ```{julia}
+#| output: false
 using CitableBase, CitableText
 engraving_text = CtsUrn("urn:cts:citeusnatarch:foundingdocuments.declindep.engraving:")
 original_text = CtsUrn("urn:cts:citeusnatarch:foundingdocuments.declindep.original:")
@@ -75,6 +76,7 @@ original_text = CtsUrn("urn:cts:citeusnatarch:foundingdocuments.declindep.origin
 Identify a collection of pages (front and back) for the original and for the engraving using `Cite2Urn`s.
 
 ```{julia}
+#| output: false
 using CitableObject
 engraving_pages = Cite2Urn("urn:cite2:citeusnatarch:declindep.engraving:")
 original_pages = Cite2Urn("urn:cite2:citeusnatarch:declindep.original:")
@@ -115,6 +117,7 @@ ortho = simpleAscii()
 Read the XML source from a URL, and make the marked up content accessible through canonical citation with the `CitableTeiReaders` package.
 
 ```{julia}
+#| output: false
 using CitableTeiReaders
 engraving_url = "https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration_engraving.xml"
 engraving_corpus = readcitable(engraving_url, engraving_text, TEIAnonblock, UrlReader)
@@ -123,6 +126,7 @@ engraving_corpus = readcitable(engraving_url, engraving_text, TEIAnonblock, UrlR
 Compose a univocal diplomatic edition from the multivalent XML document.
 
 ```{julia}
+#| output: false
 using EditionBuilders
 builder = MidDiplomaticBuilder("Diplomatic edition buidler", "dipl")
 engraving_dipl = edited(builder, engraving_corpus)
@@ -137,34 +141,47 @@ engraving_dipl = edited(builder, engraving_corpus)
 
 ### A full digital scholarly edition
 
-### Relations of text, artifact and image
+### Collect relations of text, artifact and image
 
 ```{julia}
+#| output: false
 using CitablePhysicalText
+delimited_url = "https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration.cex"
+triplesets = fromcex(delimited_url, DSECollection, UrlReader)
 ```
+
+::: callout-tip
+## Learn more about [digital scholarly editions](../digitexts/physical/)
+:::
 
 #### Services for images
 
-- configure HMT image service
+-   configure HMT image service
 
-
+::: callout-tip
+## Learn more about [citable image services](../cite/urns/imgs.qmd)
+:::
 
 ## Application: explore differences in the texts visually
 
-- computationally identify sections where texts differ
-- show image of section, linked to ICT
-- manually use the Homer Multitext project's Image Citation Tool to zoom in to  more specific region of interest and cite it with a URN. Here we save references to the region of two images illustrating the word "Happiness."
+-   computationally identify sections where texts differ
+-   show image of section, linked to ICT
+-   manually use the Homer Multitext project's Image Citation Tool to zoom in to more specific region of interest and cite it with a URN. Here we save references to the region of two images illustrating the word "Happiness."
 
 ```{julia}
 happiness_engraving = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Engrav_Pg1of1_AC@0.4672,0.1935,0.07188,0.01804")
 happiness_original = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC@0.4765,0.1892,0.07596,0.01857")
 ```
 
-
 ## Application: organize differences in the texts as a sequence alignment
+
 
 ```{julia}
 using VectorAlignments
-delimited_url = "https://raw.githubusercontent.com/neelsmith/quart-home/main/walkthrough/adoi/declaration.cex"
-dsetriples = fromcex(delimited_url, DSECollection, UrlReader)
 ```
+
+
+
+::: callout-tip
+## Learn more about [sequence alignments](../utils/)
+:::

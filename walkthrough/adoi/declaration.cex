@@ -1,7 +1,7 @@
 #!datamodels
 Collection|Model|Label|Description
-urn:cite2:ns:adoi.v1:engraving|urn:cite2:cite:datamodels.v1:dsemodel|Relations of text, "page" and documentary image for the stone engraving of the American Declaration of Independence
-urn:cite2:ns:adoi.v1:original|urn:cite2:cite:datamodels.v1:dsemodel|Relations of text, parchment page and documentary image for the American Declaration of Independence
+urn:cite2:ns:adoi.v1:engraving|urn:cite2:cite:datamodels.v1:dsemodel|Relations of text, documentary image and face for the stone engraving of the American Declaration of Independence
+urn:cite2:ns:adoi.v1:original|urn:cite2:cite:datamodels.v1:dsemodel|Relations of text, documentary image and parchment page for the American Declaration of Independence
 
 #!citerelationset
 urn|urn:cite2:ns:adoi.v1:engraving
