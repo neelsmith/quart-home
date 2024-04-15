@@ -10,4 +10,4 @@ This page will introduce generic utilities for sequence alignment.
 :::
 
 
-- VectorAlignments.jl
+- VectorAlignments.jl: see [documentation](https://neelsmith.github.io/VectorAlignments.jl/stable/)
