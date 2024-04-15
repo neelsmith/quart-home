@@ -13,6 +13,6 @@ This page will introduce packages implementing the `OrthographicSystem` interfac
 
 
 
-- PolytonicGreek.jl
-- AtticGreek.jl
-- ManuscriptOrthography.jl
+- PolytonicGreek.jl: see [documentation](https://neelsmith.github.io/PolytonicGreek.jl/stable/)
+- AtticGreek.jl: see [documentation](https://neelsmith.github.io/AtticGreek.jl/stable/)
+- ManuscriptOrthography.jl: see [documentation](https://homermultitext.github.io/ManuscriptOrthography.jl/stable/)

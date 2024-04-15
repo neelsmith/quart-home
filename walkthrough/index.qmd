@@ -13,9 +13,10 @@ using Pkg
 pkglist = [
     "CitableBase", 
     "CitableText", "CitableObject", "CitableImage",
+
     "Orthography", "CitableTeiReaders", "EditionBuilders",
 
-    #"VectorAlignments"
+    "VectorAlignments"
 ]
 for p in pkglist
     Pkg.add(p)    
@@ -162,5 +163,5 @@ happiness_original = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_
 ## Application: organize differences in the texts as a sequence alignment
 
 ```{julia}
-# using VectorAlignments
+using VectorAlignments
 ```

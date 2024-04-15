@@ -3,6 +3,14 @@ title: "Edition builders"
 ---
 
 
+
+:::{.callout-caution}
+## Content incomplete
+
+This page will introduce building specified editions from a citable multivalent source.
+:::
+
+
 Build specified editions (diplomatic, normalized in various ways...)
 
 Text content can be directly analyzed without further knowledge of the source documents format: the only structure we need to recognize is the citable passage identified by CTS URN.

@@ -2,4 +2,13 @@
 title: "Text, artifact and image"
 ---
 
+
+:::{.callout-caution}
+## Content incomplete
+
+This page will introduce a model of the relations of artifacts, images and texts.
+:::
+
+
+
 - CitablePhysicalText.jl

@@ -11,4 +11,4 @@ This page will introduce implementations of the `OrthographicSystem` interface f
 :::
 
 
-- Lycian.jl
+- Lycian.jl: see [documentation](https://neelsmith.github.io/Lycian.jl/stable/)

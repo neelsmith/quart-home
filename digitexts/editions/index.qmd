@@ -2,6 +2,13 @@
 title: "Building citable editions from structured text sources"
 ---
 
+:::{.callout-caution}
+## Content incomplete
+
+This page will introduce turning structured text sources into citable digital editions.
+:::
+
+
 Two abstractions developed at HC MID allow us to go from multivalent sources to computationally analyzable univocal editions in two steps:
 
 

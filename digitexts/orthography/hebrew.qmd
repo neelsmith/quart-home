@@ -12,4 +12,4 @@ This page will introduce a package implementing the `OrthographicSystem` interfa
 :::
 
 
-- BiblicalHebrew.jl
+- BiblicalHebrew.jl: see [documentation](https://neelsmith.github.io/BiblicalHebrew.jl/stable/)

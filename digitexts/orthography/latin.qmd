@@ -10,4 +10,4 @@ This page will introduce implementations of the `OrthographicSystem` interface f
 :::
 
 
-- LatinOrthography.jl
+- LatinOrthography.jl: see [documentation](https://neelsmith.github.io/LatinOrthography.jl/stable/)

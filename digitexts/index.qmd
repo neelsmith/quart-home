@@ -2,6 +2,14 @@
 title: "Digital texts: overview"
 ---
 
+
+:::{.callout-caution}
+## Content incomplete
+
+This page will introduce concepts and code for digital text analysis.
+:::
+
+
 Overview: what's different about computational study of texts in historical languages?
 
 - builds on central ideas of [citation](../cite/)
