@@ -1,5 +1,5 @@
 ---
-title: "Edition builders"
+title: "Build univocal editions"
 ---
 
 
@@ -11,9 +11,10 @@ This page will introduce building specified editions from a citable multivalent 
 :::
 
 
-Build specified editions (diplomatic, normalized in various ways...)
+Build specific *univocal editions* (diplomatic, normalized in various ways...)
 
-Text content can be directly analyzed without further knowledge of the source documents format: the only structure we need to recognize is the citable passage identified by CTS URN.
+I use the term "univocal edition" to refer to an edition that makes a single version of the text with specified semantics available via canonical citation: text content can be directly analyzed without further knowledge of the source document's format.
+
 
 
 See the [documentation for the `EditionBuilders` package](https://hcmid.github.io/EditionBuilders.jl/stable/).
