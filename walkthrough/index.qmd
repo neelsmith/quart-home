@@ -18,7 +18,7 @@ pkglist = [
     "Orthography", "CitableTeiReaders", "EditionBuilders",
     "CitablePhysicalText",
 
-    "VectorAlignments"
+    "VectorAlignments", "StatsBase", "OrderedCollections"
 ]
 for p in pkglist
     Pkg.add(p)    
@@ -185,25 +185,10 @@ imgservice = IIIFservice(imgbaseurl, imgroot)
 ## TBA
 :::
 
-
--   computationally identify sections where texts differ
--   show image of section, linked to ICT
--   manually use the Homer Multitext project's Image Citation Tool to zoom in to more specific region of interest and cite it with a URN. Here we save references to the region of two images illustrating the word "Happiness."
+First, we'll find passages where the two editions differ. One way to focus our attention on differences in content rather than formatting is to compare tokenizations of each text.  The following function compares two citable text passages by tokenizing each and comparing the result.
 
 ```{julia}
-happiness_engraving = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Engrav_Pg1of1_AC@0.4672,0.1935,0.07188,0.01804")
-happiness_original = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC@0.4765,0.1892,0.07596,0.01857")
-```
-
-## Application: organize differences in the texts as a sequence alignment
-
-
-:::{.callout-warning}
-## TBA
-:::
-
-
-```{julia}
+#| output: false
 using CitableCorpus
 
 """True if text content of tokens in two citable passages matches."""
@@ -217,6 +202,90 @@ end
 ```
 
 
+Next we use the function to find parallel passages where the texts differ.
+
+```{julia}
+#| output: false
+@assert length(original_dipl) == length(engraving_dipl.passages)
+
+difflist = []   
+for (orig,dipl) in zip(original_dipl.passages, engraving_dipl.passages)
+    if ! tokensmatch(orig,dipl,ortho)
+        push!(difflist,(orig,dipl))
+    end
+end
+```
+
+
+Look in appropriate set of triples:
+
+```{julia}
+triplesets[1] |> label
+```
+
+```{julia}
+#| output: false
+triples_engraving = triplesets[1]
+triples_original = triplesets[2]
+```
+Now find images
+
+```{julia}
+(psg1_orig, psg1_engraving) = difflist[1]
+imgs_orig = imagesfortext(psg1_orig.urn, triples_original; keepversion = false)
+imgs_engraving = imagesfortext(psg1_engraving.urn, triples_engraving; keepversion = false)
+```
+
+Display the result on this web page!
+
+```{julia}
+#| as-is: true
+ict = "http://www.homermultitext.org/ict2/?"
+img_md_original = linkedMarkdownImage(ict, imgs_orig[1], imgservice; w=600, caption="Passage in original")
+
+img_md_engraving = linkedMarkdownImage(ict, imgs_orig[1], imgservice; w=600, caption="Passage in engraving")
+
+
+"""
+ $(img_md_original)
+
+ $(img_md_engraving) 
+""" |> Markdown.parse
+```
+
+-   manually use the Homer Multitext project's Image Citation Tool to zoom in to more specific region of interest and cite it with a URN. Here we save references to the region of two images illustrating the word "Happiness."
+
+
+Manually explore, create two more detailed references.
+
+```{julia}
+happiness_engraving = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Engrav_Pg1of1_AC@0.4672,0.1935,0.07188,0.01804")
+happiness_original = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_Pg1of1_AC@0.4765,0.1892,0.07596,0.01857")
+
+
+detail_md_original = linkedMarkdownImage(ict, happiness_original, imgservice; w=600, caption="Passage in original")
+
+detail_md_engraving = linkedMarkdownImage(ict,happiness_engraving, imgservice; w=600, caption="Passage in engraving")
+
+
+"""
+ $(detail_md_original)
+
+ $(detail_md_engraving) 
+""" |> Markdown.parse
+
+```
+
+## Application: organize differences in the texts as a sequence alignment
+
+
+:::{.callout-warning}
+## TBA
+:::
+
+
+
+
 ::: callout-tip
 ## Learn more about [citable text corpora](../digitexts/editions/citablecorpora.qmd)
 :::
@@ -224,26 +293,12 @@ end
 
 ```{julia}
 using VectorAlignments
-difflist = []   
-for (orig,dipl) in zip(original_dipl.passages, engraving_dipl.passages)
-    if ! tokensmatch(orig,dipl,ortho)
-        push!(difflist,(orig,dipl))
-    end
-end
-difflist
-
-#x = tokensmatch(original_dipl.passages[4], engraving_dipl.passages[4], ortho)
-#end
-#x = zip(original_dipl.passages, engraving_dipl.passages) |> collect
-
-
+tkns1 = split("Now is the time")
+tkns2 = split("Now is a time")
+featurematrix(tkns1, tkns2)
 ```
 
 
-```{julia}
-
-
-```
 
 ::: callout-tip
 ## Learn more about [sequence alignments](../utils/)
@@ -252,9 +307,22 @@ difflist
 
 
 ## Application: basic vocabulary frequency
-:::{.callout-warning}
-## TBA
-:::
 
+It is straightforward to find the vocabulary of a citable corpus with a known orthography.
+
+```{julia}
+tkns = tokenize(original_dipl, ortho)
+lex = filter(tkn -> tokencategory(tkn) isa LexicalToken,tkns)  
+vocab = map(tkn -> tokentext(tkn), lex)
+```
+
+
+We can use the `StatsBase` package to count frequencies of items in a list, and can convert that dictionary to a sortable ordered dictionary with the `OrderedCollections`  package.
+
+```{julia}
+using StatsBase, OrderedCollections
+counts = countmap(vocab) |> OrderedDict
+sort!(counts; byvalue = true, rev = true)
+```
 
 ## Works cited 
