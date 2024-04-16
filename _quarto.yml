@@ -54,6 +54,7 @@ website:
         - text: "---"        
         - digitexts/editions/markupreaders.qmd
         - digitexts/editions/editionbuilders.qmd
+        - digitexts/editions/citablecorpora.qmd
 
     - title: "Physical texts"
       contents:

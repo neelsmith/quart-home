@@ -13,6 +13,7 @@ using Pkg
 pkglist = [
     "CitableBase", 
     "CitableText", "CitableObject", "CitableImage",
+    "CitableCorpus",
 
     "Orthography", "CitableTeiReaders", "EditionBuilders",
     "CitablePhysicalText",
@@ -132,8 +133,8 @@ Compose a univocal diplomatic edition from the multivalent XML document with the
 #| output: false
 using EditionBuilders
 builder = MidDiplomaticBuilder("Diplomatic edition buidler", "dipl")
-engraving_dipl = edited(builder, engraving_corpus)
-original_dipl = edited(builder, original_corpus)
+engraving_dipl = edited(builder, engraving_corpus; edition = "engraving_dip")
+original_dipl = edited(builder, original_corpus; edition = "original_dipl")
 ```
 
 ::: callout-tip
@@ -201,14 +202,56 @@ happiness_original = Cite2Urn("urn:cite2:citeusnatarch:declindep.v1:Declaration_
 ## TBA
 :::
 
+
 ```{julia}
-using VectorAlignments
+using CitableCorpus
+
+"""True if text content of tokens in two citable passages matches."""
+function tokensmatch(psg1::CitableCorpus.CitablePassage, psg2::CitableCorpus.CitablePassage, orthography::OrthographicSystem)
+    tkns1 = tokenize(psg1,ortho)
+    tkns2 = tokenize(psg2,ortho)
+    text1 = map(t -> t.passage.text, tkns1)
+    text2 = map(t -> t.passage.text, tkns2)
+    text1 == text2
+end
 ```
 
 
+::: callout-tip
+## Learn more about [citable text corpora](../digitexts/editions/citablecorpora.qmd)
+:::
+
+
+```{julia}
+using VectorAlignments
+difflist = []   
+for (orig,dipl) in zip(original_dipl.passages, engraving_dipl.passages)
+    if ! tokensmatch(orig,dipl,ortho)
+        push!(difflist,(orig,dipl))
+    end
+end
+difflist
+
+#x = tokensmatch(original_dipl.passages[4], engraving_dipl.passages[4], ortho)
+#end
+#x = zip(original_dipl.passages, engraving_dipl.passages) |> collect
+
+
+```
+
+
+```{julia}
+
+
+```
 
 ::: callout-tip
 ## Learn more about [sequence alignments](../utils/)
 :::
+
+
+
+## Application: basic vocabulary frequency
+
 
 ## Works cited 
