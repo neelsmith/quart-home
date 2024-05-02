@@ -74,4 +74,5 @@ I list here examples of some of the non-textual contents I have worked with digi
 
 ## Odds and ends
 
--   [Utilities](../utils/) (Vector alignments)
+- Utilities for [vector alignments](../utils/)
+- [`Lectionary.jl`](http://neelsmith.quarto.pub/lectionary): a Julia package for coordinating the liturgical calendar year with the Gregorian civil calendar and with the readings from the Revised Common Lectionary (RCL).
