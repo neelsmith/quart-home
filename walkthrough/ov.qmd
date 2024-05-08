@@ -1,0 +1,118 @@
+---
+title: "Overview of packages"
+---
+
+
+Graph of package dependencies:
+
+```{mermaid}
+graph TD;
+CitableText --> CitableBase
+CitableObject --> CitableBase
+CiteEXchange --> CitableBase
+
+CitableCorpus --> CitableText
+CitableCorpus --> CiteEXchange
+CitableCorpus --> CitableBase
+
+CitableCollection --> CitableObject
+CitableCollection --> CiteEXchange
+CitableCollection --> CitableBase
+
+
+CitableImage --> CitableObject
+CitableImage --> CiteEXchange
+CitableImage --> CitableBase
+
+
+CitablePhysicalText --> CitableBase
+CitablePhysicalText --> CitableImage
+CitablePhysicalText --> CitableObject
+CitablePhysicalText --> CitableText
+CitablePhysicalText --> CiteEXchange
+
+
+CitableTeiReaders --> CitableText
+CitableTeiReaders --> CitableCorpus
+
+EditionBuilders --> CitableText
+EditionBuilders --> CitableCorpus
+
+
+Orthography --> CitableCorpus
+Orthography --> CitableText
+
+
+
+PolytonicGreek --> Orthography
+AtticGreek  --> Orthography
+ManuscriptOrthography  --> Orthography
+ManuscriptOrthography  --> PolytonicGreek
+
+
+CitableParserBuilder --> CitableBase
+CitableParserBuilder --> CitableText
+CitableParserBuilder --> CitableCorpus
+CitableParserBuilder --> CitableObject
+CitableParserBuilder --> Orthography
+
+Kanones --> AtticGreek
+Kanones --> CitableBase
+Kanones --> CitableObject
+Kanones --> CitableParserBuilder
+Kanones --> Orthography
+Kanones --> PolytonicGreek
+
+
+Tabulae --> CitableParserBuilder
+Tabulae --> CitableObject
+
+CitableCorpusAnalysis --> CitableText
+CitableCorpusAnalysis --> CitableCorpus
+CitableCorpusAnalysis --> CitableParserBuilder
+CitableCorpusAnalysis --> Orthography
+
+
+Lycian --> Orthography
+Lycian --> CitableText
+Lycian --> CitableCorpus
+Lycian --> CitableObject
+Lycian --> CitableParserBuilder
+
+
+classDef base fill:#ffffba
+class CitableBase base
+
+classDef cite fill:#bae1ff
+class CitableText,CitableObject,CitableImage,CiteEXchange cite
+class CitableCollection,CitableCorpus,CitablePhysicalText cite
+
+classDef mid fill:#baffc9
+class Orthography,CitableTeiReaders,EditionBuilders mid
+
+classDef ortho fill:#ffdfba
+class PolytonicGreek,AtticGreek,ManuscriptOrthography ortho
+
+
+
+```
+
+
+Color key:
+
+
+```{mermaid}
+graph TD;
+    cite["Core CITE architecture"]
+    mid["Abstractions from HC MID"]
+    ortho["Orthographies"]
+
+    classDef citeclass fill:#bae1ff
+    class cite citeclass
+
+    classDef midclass fill:#baffc9
+    class mid midclass
+
+    classDef orthclass fill:#ffdfba
+    class ortho orthclass
+```
