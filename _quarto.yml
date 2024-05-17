@@ -15,6 +15,7 @@ website:
         file: digschol/index.qmd     
       - text: "Why Julia?"
         file: julia/index.qmd
+      
       - about.qmd
 
   sidebar:
@@ -81,6 +82,9 @@ website:
         - personal/white.qmd
         - personal/juliagen.qmd
         
+    - title: "Narrative thread"
+      contents:
+      - cite/urns/
 
 format:
   html:

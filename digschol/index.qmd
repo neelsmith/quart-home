@@ -2,6 +2,10 @@
 title: "Digital scholarship"
 ---
 
+
+Here's [the narrative sequence](./narrative/)
+
+
 ::: callout-important
 The topics in the "Concepts and code" section form a natural sequence, progressing from citation to successsive forms of textual manipulation and analysis. Linked information includes fuller narrative presentations of concepts that could be read sequentially like a book, but I've chosen to present them together with documentation and tutorials using implementations of the concepts, because I don't believe that we can adequately assess or critique ideas about digital scholarship without running code.
 
