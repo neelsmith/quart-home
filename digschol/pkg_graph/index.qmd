@@ -35,10 +35,12 @@ CitablePhysicalText --> CitableImage
 CitablePhysicalText --> CitableObject
 CitablePhysicalText --> CitableText
 CitablePhysicalText --> CiteEXchange
-
+click CitablePhysicalText "https://neelsmith.quarto.pub/citablephysicaltext/" "Citable physical texts"
 
 CitableTeiReaders --> CitableText
 CitableTeiReaders --> CitableCorpus
+click CitableTeiReaders "https://neelsmith.quarto.pub/citableteireaders/" "Make marked up texts citable"
+
 
 EditionBuilders --> CitableText
 EditionBuilders --> CitableCorpus
@@ -110,7 +112,7 @@ classDef quarto stroke-width:4,stroke:#1E90FF
 classDef morph fill:#d8d4f2
 class CitableParserBuilder,Kanones,Tabulae morph
 
-class CitableBase,CitableText,CitableObject,CiteEXchange,CitableImage,CitableCorpus,CitableCollection,Orthography,CitableParserBuilder,Tabulae quarto
+class CitableBase,CitableText,CitableObject,CiteEXchange,CitableImage,CitableCorpus,CitableCollection,CitablePhysicalText,Orthography,CitableTeiReaders,CitableParserBuilder,Tabulae quarto
 ```
 
 
