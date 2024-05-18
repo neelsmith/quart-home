@@ -8,7 +8,7 @@ title: "Morphological parsing"
 This page will introduce a model and Julia interface for morphological parsing.
 :::
 
-See documentation for the [`CitableParserBuilder` package](https://neelsmith.github.io/CitableParserBuilder.jl/stable/)
+See documentation for the [`CitableParserBuilder` package](https://neelsmith.github.io/CitableParserBuilder.jl/stable/) (begin updated [here](https://neelsmith.quarto.pub/citableparserbuilder/))
 
 And see some implementations:
 
