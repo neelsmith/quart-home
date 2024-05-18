@@ -18,3 +18,11 @@ Overview: what's different about computational study of texts in historical lang
 - the Indo-European and Semitic languages I work in are [morphologically rich](./parsing/): we need to take advantage of thats
 
 
+
+[Orthography](../digitexts/orthography/)
+
+[Citable texts](../digitexts/editions/)
+
+[Digital scholarly editions](../digitexts/physical/)
+
+[Morphological parsing](../digitexts/parsing/)

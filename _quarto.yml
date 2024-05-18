@@ -29,6 +29,8 @@ website:
         - text: "---"
         - hmt/index.qmd        
         - semantic-editions/index.qmd             
+        - text: "---"
+        - utils/index.qmd             
         
 
 

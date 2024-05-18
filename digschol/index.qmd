@@ -2,81 +2,45 @@
 title: "Digital scholarship"
 ---
 
+## Digital scholarship: concepts and code
+
+The digital scholarship linked here has an overall logic: there is a natural sequence progressing from citation, to successsive forms of textual manipulation and analysis, to applications of those concepts.
+
+
+
+I've chosen to present them together with documentation and tutorials using implementations of the concepts, because I don't believe that we can adequately assess or critique ideas about digital scholarship without running code.
+
 
 Here's [the narrative sequence](./narrative/)
 
 
-::: callout-important
-The topics in the "Concepts and code" section form a natural sequence, progressing from citation to successsive forms of textual manipulation and analysis. Linked information includes fuller narrative presentations of concepts that could be read sequentially like a book, but I've chosen to present them together with documentation and tutorials using implementations of the concepts, because I don't believe that we can adequately assess or critique ideas about digital scholarship without running code.
+
+
+
+
+
+The topics in the "Concepts and code" section form a natural sequence,  Linked information includes fuller narrative presentations of concepts that could be read sequentially like a book, but 
+
+
 
 All code in the linked sections is in written  [Julia](../julia/).
-:::
 
-## Digital scholarship: concepts and code
+## Fundamental generic packages for citation and textual analysis
 
--   Scholarship in the humanities depends on **citation** to identify its unique objects of study. This section presents work on technology-independent citation using URNs.
--   All analysis of **digital texts** must take account of how the text's writing system, or *orthography*, is digitally encoded, and how we can derive *citable digital editions* from sources in a variety of structured text formats. I'm interested in digital *scholarly editions of physical texts* that encode both textual and non-textual contents. *Morphological parsing* is especially important for the morphologically rich languages I study.
 
-::: columns
-::: {.column width="5%"}
-<!-- empty column to create gap -->
-:::
 
-::: {.column width="40%"}
-### [Citation](../cite/)
+- [citation](../cite/)
+- [digital texts](../digitexts/)
+- a simple illustration: a brief notebook using Julia to apply ideas about citation and digital texts to [the American Declaration of Independence](../walkthrough/).
 
-[Citing texts](../cite/urns/cts.qmd)
+## Applications 
 
-[Citing objects](../cite/urns/cite2.qmd)
+- the [Homer Mulitext project](../hmt/): Julia packages and some applications.
+- [semantic editions](../semantic-editions/) of texts.  
 
-[Citing images](../cite/urns/imgs.qmd)
-:::
 
-::: {.column width="5%"}
-<!-- empty column to create gap -->
-:::
 
-::: {.column width="40%"}
-### [Digital texts](../digitexts/)
 
-[Orthography](../digitexts/orthography/)
+## Utilities
 
-[Citable texts](../digitexts/editions/)
-
-[Digital scholarly editions](../digitexts/physical/)
-
-[Morphological parsing](../digitexts/parsing/)
-:::
-:::
-
-### A simple illustration: the American Declaration of Independence
-
--   A brief notebook using Julia to apply ideas about citation and digital texts to [the American Declaration of Independence](../walkthrough/).
-
-## The [Homer Mulitext project](../hmt/)
-
--   The HMT archive
--   Manuscript layout
--   Scholiastic language
--   Homeric language
--   Finding Aristarchus
-
-## Semantic editions of texts
-
-I use the term *semantic edition* for a digital edition that aims to encode the entire contents, textual and non-textual, of a physical document.
-
-I list here examples of some of the non-textual contents I have worked with digitally:
-
--   Tools for multilingual reading: the Complutensian polyglot Bible
--   Datasets for geographic maps: Ptolemy, *Geography*:
--   Precomputed mathematical functions: Ptolemy, *Almagest*:
--   Proofs with mathematical figures: Euclid, *Geometry*; Archimedes, *Spiral Lines*
--   Grammatical inflectional tables
--   Chronological computation: Jerome's *Chronicles*
--   Documents with ancient Greek musical notation (including manuscripts of Alypius)
--   Manuscripts with musical notation in neumes
-
-## Odds and ends
-
-- Utilities for [vector alignments](../utils/)
-- [`Lectionary.jl`](http://neelsmith.quarto.pub/lectionary): a Julia package for coordinating the liturgical calendar year with the Gregorian civil calendar and with the readings from the Revised Common Lectionary (RCL).
+A few other Julia packages for [various generic tasks](../utils/).
