@@ -21,9 +21,8 @@ click CitableCorpus "https://neelsmith.quarto.pub/citablecorpus/" "Citable text 
 
 CitableCollection --> CitableObject
 CitableCollection --> CiteEXchange
-
 CitableCollection --> CitableBase
-
+click CitableCollection "https://neelsmith.quarto.pub/citablecollection/" "Citable collections"
 
 CitableImage --> CitableObject
 CitableImage --> CiteEXchange
@@ -111,7 +110,7 @@ classDef quarto stroke-width:4,stroke:#1E90FF
 classDef morph fill:#d8d4f2
 class CitableParserBuilder,Kanones,Tabulae morph
 
-class CitableBase,CitableText,CitableObject,CiteEXchange,CitableImage,CitableCorpus,Orthography,CitableParserBuilder,Tabulae quarto
+class CitableBase,CitableText,CitableObject,CiteEXchange,CitableImage,CitableCorpus,CitableCollection,Orthography,CitableParserBuilder,Tabulae quarto
 ```
 
 
