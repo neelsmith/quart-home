@@ -10,7 +10,7 @@ title: "Conceptual overview"
 Scholarship in the humanities depends on **citation** to identify its unique objects of study. This section presents work on technology-independent citation using URNs: passages of texts (implemented with CTS URNs), physical artifacts (CITE2 URNs) and documentary images (CITE2 URNs, including extension for region of interest on an image)
 :::
 
-- [Citation and scholarship](https://neelsmith.quarto.pub/citablebase/concepts/) (concepts impemented in the `CitableBase` package)
+- [Citation and scholarship](https://neelsmith.quarto.pub/citablebase/concepts/) (concepts implemented in the `CitableBase` package)
 - [Citing texts](https://neelsmith.quarto.pub/citabletext/concepts/) (the `CitableText` package)
 - Citing artifacts
 - Citing images
