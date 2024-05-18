@@ -7,8 +7,12 @@ Arrows indicate package dependencies.
 ```{mermaid}
 graph TD;
 CitableText --> CitableBase
+click CitableText "https://neelsmith.quarto.pub/citabletext/" "Citing texts"
 CitableObject --> CitableBase
+click CitableObject "https://neelsmith.quarto.pub/citableobject/" "Citing objects"
 CiteEXchange --> CitableBase
+click CiteEXchange "https://neelsmith.quarto.pub/citeexchange/" "Serializing citable data"
+
 
 CitableCorpus --> CitableText
 CitableCorpus --> CiteEXchange
@@ -17,6 +21,7 @@ click CitableCorpus "https://neelsmith.quarto.pub/citablecorpus/" "Citable text 
 
 CitableCollection --> CitableObject
 CitableCollection --> CiteEXchange
+
 CitableCollection --> CitableBase
 
 
@@ -105,7 +110,7 @@ classDef quarto stroke-width:4,stroke:#1E90FF
 classDef morph fill:#d8d4f2
 class CitableParserBuilder,Kanones,Tabulae morph
 
-class CitableBase,CitableCorpus,Orthography,CitableParserBuilder,Tabulae quarto
+class CitableBase,CitableText,CitableObject,CiteEXchange,CitableCorpus,Orthography,CitableParserBuilder,Tabulae quarto
 ```
 
 
@@ -145,7 +150,7 @@ Packages highlighted like this are linked to documentation on `neelsmith.quarto.
 
 ```{mermaid}
 graph TD;
-quarto["Documented on quarto"]
+quarto["Documented on quarto.pub"]
 click quarto "http://neelsmith.quarto.pub" "toolie"
 classDef quartoclass stroke-width:4,stroke:#1E90FF,fill:#ffffff
 class quarto quartoclass
