@@ -4,30 +4,23 @@ title: "Digital scholarship"
 
 ## Digital scholarship: concepts and code
 
-The digital scholarship linked here has an overall logic: there is a natural sequence progressing from citation, to successsive forms of textual manipulation and analysis, to applications of those concepts.
+The digital scholarship presented here has an overall logic: there is a natural progression from citation, to successsive forms of textual manipulation and analysis, to applications of those concepts.
 
-You can 
-
-
-I've chosen to present them together with documentation and tutorials using implementations of the concepts, because I don't believe that we can adequately assess or critique ideas about digital scholarship without running code.
-
-
-## Concepts
-
-- Here's [the narrative sequence](./narrative/)
-
-## Julia packages
-
-- [Graph of package dependencies](./pkg_graph/)
+While the discussion of this work could be read in a single sequence like a book, I've chosen to compose it in separate sections alongside documentation of Julia packages implementing the concepts under discussion, since I don't believe that we can ever adequately assess or critique ideas about digital scholarship without running code.  I've tried to have it both ways by linking together a sequence of the discussions that you can follow in something more like a single narrative
 
 
 
 
-The topics in the "Concepts and code" section form a natural sequence,  Linked information includes fuller narrative presentations of concepts that could be read sequentially like a book, but 
 
+## (1) Concepts
 
+- read about the  concepts underlying this digital work in a [single narrative sequence](./narrative/)
 
-All code in the linked sections is in written  [Julia](../julia/).
+## (2) Code
+
+All code in the following sections is  written in  [Julia](../julia/).   Documentation for each package includes tutorials, "how-to" guides for particular tasks, and API documentation. The documentation was built with [Quarto](https://quarto.org/), so that all  examples of code output are generated from running source code, and all API documentation is extracted from the package's source code.
+
+- see a [graph showing relations](./pkg_graph/) among these packages.
 
 ### Fundamentals: citation and textual analysis
 

@@ -75,9 +75,9 @@ website:
       contents:
         - cite/urns/index.qmd
         - text: "---"          
-        - cite/urns/cts.qmd
-        - cite/urns/cite2.qmd   
-        - cite/urns/imgs.qmd                   
+        - cite/urns/cts/index.qmd
+        - cite/urns/cite2/index.qmd   
+        - cite/urns/imgs/index.qmd                   
 
 
     - title: "Personal"

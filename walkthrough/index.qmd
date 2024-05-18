@@ -69,7 +69,7 @@ original_text = CtsUrn("urn:cts:citeusnatarch:foundingdocuments.declindep.origin
 ```
 
 ::: callout-tip
-## Learn more about [citation with `CtsUrn`s](../cite/urns/cts.qmd)
+## Learn more about [citation with `CtsUrn`s](../cite/urns/cts/)
 :::
 
 ### Citing objects
@@ -84,7 +84,7 @@ original_pages = Cite2Urn("urn:cite2:citeusnatarch:declindep.original:")
 ```
 
 ::: callout-tip
-## Learn more about [citation with `Cite2Urn`s](../cite/urns/cite2.qmd)
+## Learn more about [citation with `Cite2Urn`s](../cite/urns/cite2/)
 :::
 
 ### Citing images
@@ -174,7 +174,7 @@ imgservice = IIIFservice(imgbaseurl, imgroot)
 ```
 
 ::: callout-tip
-## Learn more about [citable image services](../cite/urns/imgs.qmd)
+## Learn more about [citable image services](../cite/urns/imgs/)
 :::
 
 
