@@ -67,6 +67,8 @@ Kanones --> PolytonicGreek
 
 Tabulae --> CitableParserBuilder
 Tabulae --> CitableObject
+click Tabulae "https://neelsmith.quarto.pub/tabulae/" "Build Latin morphological parsers"
+
 
 CitableCorpusAnalysis --> CitableText
 CitableCorpusAnalysis --> CitableCorpus
@@ -97,7 +99,7 @@ class PolytonicGreek,AtticGreek,ManuscriptOrthography ortho
 
 classDef quarto stroke-width:4,stroke:#1E90FF
 
-class CitableBase,CitableParserBuilder quarto
+class CitableBase,CitableParserBuilder,Tabulae quarto
 ```
 
 
