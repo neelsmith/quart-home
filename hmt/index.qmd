@@ -3,19 +3,19 @@ title: "The Homer Multitext project"
 ---
 
 
-:::{.callout-caution}
-## Content incomplete
+## Digital infrastructure for the HMT project
 
-This page will introduce digital work on the Homer Multitext project.
-:::
-
-
-Overview: TBA
-
+- The HMT archive on github, and the `HmtArchive` package
+- Manuscript orthography (the `ManuscriptOrthography`) package
+- Authority lists
+- A HMT Greek lexicon
+- Dashboards for exploring the digital archive
 
 
--   The HMT archive
--   Manuscript layout
--   Scholiastic language
--   Homeric language
--   Finding Aristarchus
+
+## Analysis of digital material from the HMT project
+
+- Manuscript layout
+- Scholiastic language
+- Homeric language
+- Finding Aristarchus

@@ -1,5 +1,5 @@
 ---
-title: "Relations of generic packages"
+title: "Relations of fundamental packages"
 ---
 
 Arrows indicate package dependencies.
@@ -13,6 +13,7 @@ CiteEXchange --> CitableBase
 CitableCorpus --> CitableText
 CitableCorpus --> CiteEXchange
 CitableCorpus --> CitableBase
+click CitableCorpus "https://neelsmith.quarto.pub/citablecorpus/" "Citable text corpora"
 
 CitableCollection --> CitableObject
 CitableCollection --> CiteEXchange
@@ -40,7 +41,7 @@ EditionBuilders --> CitableCorpus
 
 Orthography --> CitableCorpus
 Orthography --> CitableText
-
+click Orthography "https://neelsmith.quarto.pub/orthography/" "Orthographic systems"
 
 
 PolytonicGreek --> Orthography
@@ -48,6 +49,8 @@ AtticGreek  --> Orthography
 ManuscriptOrthography  --> Orthography
 ManuscriptOrthography  --> PolytonicGreek
 
+BiblicalHebrew  --> Orthography
+LatinOrthography --> Orthography
 
 CitableParserBuilder --> CitableBase
 CitableParserBuilder --> CitableText
@@ -95,22 +98,14 @@ classDef mid fill:#baffc9
 class Orthography,CitableTeiReaders,EditionBuilders mid
 
 classDef ortho fill:#ffdfba
-class PolytonicGreek,AtticGreek,ManuscriptOrthography ortho
+class PolytonicGreek,AtticGreek,ManuscriptOrthography,BiblicalHebrew,LatinOrthography,Lycian ortho
 
 classDef quarto stroke-width:4,stroke:#1E90FF
 
-class CitableBase,CitableParserBuilder,Tabulae quarto
-```
+classDef morph fill:#d8d4f2
+class CitableParserBuilder,Kanones,Tabulae morph
 
-
-Packages highlighted like this are linked to documentation on `neelsmith.quarto.pub`.
-
-```{mermaid}
-graph TD;
-quarto["Documented on quarto"]
-click quarto "http://neelsmith.quarto.pub" "toolie"
-classDef quartoclass stroke-width:4,stroke:#1E90FF,fill:#ffffff
-class quarto quartoclass
+class CitableBase,CitableCorpus,Orthography,CitableParserBuilder,Tabulae quarto
 ```
 
 
@@ -119,9 +114,10 @@ Color key:
 
 ```{mermaid}
 graph TD;
-    cite["Core CITE architecture"]
-    mid["Abstractions from HC MID"]
-    ortho["Orthographies"]
+    cite["Core\nCITE architecture"]
+    mid["Digital texts\n(from HC MID)"]
+    ortho["Orthographic\nsystems"]
+    morph["Morphological\nparsing"]
 
  
 
@@ -134,6 +130,20 @@ graph TD;
     classDef orthclass fill:#ffdfba
     class ortho orthclass
 
-
+    classDef morphclass fill:#d8d4f2
+    class morph morphclass
 
 ```
+
+
+
+Packages highlighted like this are linked to documentation on `neelsmith.quarto.pub`:
+
+```{mermaid}
+graph TD;
+quarto["Documented on quarto"]
+click quarto "http://neelsmith.quarto.pub" "toolie"
+classDef quartoclass stroke-width:4,stroke:#1E90FF,fill:#ffffff
+class quarto quartoclass
+```
+

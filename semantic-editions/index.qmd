@@ -3,12 +3,6 @@ title: "Semantic editions"
 ---
 
 
-:::{.callout-caution}
-## Content incomplete
-
-This page will introduce projects creating semantic editions of a variety of texts.
-:::
-
 I use the term *semantic edition* for a digital edition that aims to encode the entire contents, textual and non-textual, of a physical document.
 
 
