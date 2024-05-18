@@ -1,5 +1,5 @@
 ---
-title: "Homer Multitext project: overview"
+title: "The Homer Multitext project"
 ---
 
 

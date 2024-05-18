@@ -1,11 +1,10 @@
 ---
-title: "Narrative overview"
+title: "Conceptual overview"
 ---
 
 
 ## Citation
 
-### Overview
 
 ::: {.callout-tip title="Summary"}
 Scholarship in the humanities depends on **citation** to identify its unique objects of study. This section presents work on technology-independent citation using URNs: passages of texts (implemented with CTS URNs), physical artifacts (CITE2 URNs) and documentary images (CITE2 URNs, including extension for region of interest on an image)
