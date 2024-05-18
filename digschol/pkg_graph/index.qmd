@@ -2,8 +2,7 @@
 title: "Relations of generic packages"
 ---
 
-Arrows indicate package dependencies:
-
+Arrows indicate package dependencies.
 
 ```{mermaid}
 graph TD;
@@ -93,8 +92,19 @@ class Orthography,CitableTeiReaders,EditionBuilders mid
 classDef ortho fill:#ffdfba
 class PolytonicGreek,AtticGreek,ManuscriptOrthography ortho
 
+classDef quarto stroke-width:4,stroke:#1E90FF
+
+class CitableParserBuilder quarto
+```
 
 
+Packages highlighted like this are documented on `neelsmith.quarto.pub`.
+
+```{mermaid}
+graph TD;
+quarto["Documented on quarto"]
+classDef quartoclass stroke-width:4,stroke:#1E90FF,fill:#ffffff
+class quarto quartoclass
 ```
 
 
@@ -107,6 +117,8 @@ graph TD;
     mid["Abstractions from HC MID"]
     ortho["Orthographies"]
 
+ 
+
     classDef citeclass fill:#bae1ff
     class cite citeclass
 
@@ -115,4 +127,7 @@ graph TD;
 
     classDef orthclass fill:#ffdfba
     class ortho orthclass
+
+
+
 ```
