@@ -23,6 +23,8 @@ website:
       contents: 
         - digschol/index.qmd
         - text: "---"
+        - digschol/narrative/index.qmd
+        - text: "---"
         - cite/index.qmd        
         - digitexts/index.qmd
         - walkthrough/index.qmd
