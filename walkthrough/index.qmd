@@ -57,6 +57,12 @@ This page briefly illustrates how we could apply the Julia packages for citation
 
 ## Citation with URNs
 
+::: callout-tip
+## Learn more about scholarly [citation with URNs](../cite/)
+:::
+
+
+
 ### Citing texts
 
 Cite the text of the original and the engraving using `CtsUrn`s with different version identifiers.

@@ -121,17 +121,21 @@ graph TD;
 
  
 
-    classDef citeclass fill:#bae1ff
+    classDef citeclass fill:#bae1ff,stroke-width:4,stroke:#1E90FF
     class cite citeclass
+    click cite "https://neelsmith.quarto.pub/cite/" "CITE core"
 
-    classDef midclass fill:#baffc9
+    classDef midclass fill:#baffc9,stroke-width:4,stroke:#1E90FF
     class mid midclass
+    click mid "https://neelsmith.quarto.pub/digitexts/" "MID abstractions for digital text study"
 
-    classDef orthclass fill:#ffdfba
+    classDef orthclass fill:#ffdfba,stroke-width:4,stroke:#1E90FF
     class ortho orthclass
+    click ortho "https://neelsmith.quarto.pub/digitexts/orthography/" "Orthographic systems"
 
-    classDef morphclass fill:#d8d4f2
+    classDef morphclass fill:#d8d4f2,stroke-width:4,stroke:#1E90FF
     class morph morphclass
+    click morph "https://neelsmith.quarto.pub/digitexts/parsing/" "Morphological parsing"
 
 ```
 
