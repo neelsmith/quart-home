@@ -1,9 +1,9 @@
 ---
-title: "Overview of packages"
+title: "Relations of generic packages"
 ---
 
+Arrows indicate package dependencies:
 
-Graph of package dependencies:
 
 ```{mermaid}
 graph TD;

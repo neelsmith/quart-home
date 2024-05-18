@@ -12,10 +12,13 @@ You can
 I've chosen to present them together with documentation and tutorials using implementations of the concepts, because I don't believe that we can adequately assess or critique ideas about digital scholarship without running code.
 
 
-Here's [the narrative sequence](./narrative/)
+## Concepts
 
+- Here's [the narrative sequence](./narrative/)
 
+## Julia packages
 
+- [Graph of package dependencies](./pkg_graph/)
 
 
 
@@ -26,7 +29,7 @@ The topics in the "Concepts and code" section form a natural sequence,  Linked i
 
 All code in the linked sections is in written  [Julia](../julia/).
 
-## Fundamentals: citation and textual analysis
+### Fundamentals: citation and textual analysis
 
 
 
@@ -34,7 +37,7 @@ All code in the linked sections is in written  [Julia](../julia/).
 - [digital texts](../digitexts/)
 - a simple illustration: a brief notebook using Julia to apply ideas about citation and digital texts to [the American Declaration of Independence](../walkthrough/).
 
-## Applications 
+### Applications 
 
 - the [Homer Mulitext project](../hmt/): Julia packages and some applications.
 - [semantic editions](../semantic-editions/) of texts.  
@@ -42,6 +45,6 @@ All code in the linked sections is in written  [Julia](../julia/).
 
 
 
-## Utilities
+### Utilities
 
 A few other Julia packages for [various generic tasks](../utils/).

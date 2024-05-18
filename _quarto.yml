@@ -28,6 +28,7 @@ website:
         - cite/index.qmd        
         - digitexts/index.qmd
         - walkthrough/index.qmd
+        - digschol/pkg_graph/index.qmd
         - text: "---"
         - hmt/index.qmd        
         - semantic-editions/index.qmd             
