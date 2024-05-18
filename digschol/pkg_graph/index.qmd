@@ -54,6 +54,8 @@ CitableParserBuilder --> CitableText
 CitableParserBuilder --> CitableCorpus
 CitableParserBuilder --> CitableObject
 CitableParserBuilder --> Orthography
+click CitableParserBuilder "https://neelsmith.quarto.pub/citableparserbuilder/" "Build citable parsers"
+
 
 Kanones --> AtticGreek
 Kanones --> CitableBase
@@ -81,6 +83,7 @@ Lycian --> CitableParserBuilder
 
 classDef base fill:#ffffba
 class CitableBase base
+click CitableBase "https://neelsmith.quarto.pub/citablebase/" "Build citable parser"
 
 classDef cite fill:#bae1ff
 class CitableText,CitableObject,CitableImage,CiteEXchange cite
@@ -94,15 +97,16 @@ class PolytonicGreek,AtticGreek,ManuscriptOrthography ortho
 
 classDef quarto stroke-width:4,stroke:#1E90FF
 
-class CitableParserBuilder quarto
+class CitableBase,CitableParserBuilder quarto
 ```
 
 
-Packages highlighted like this are documented on `neelsmith.quarto.pub`.
+Packages highlighted like this are linked to documentation on `neelsmith.quarto.pub`.
 
 ```{mermaid}
 graph TD;
 quarto["Documented on quarto"]
+click quarto "http://neelsmith.quarto.pub" "toolie"
 classDef quartoclass stroke-width:4,stroke:#1E90FF,fill:#ffffff
 class quarto quartoclass
 ```
