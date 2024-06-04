@@ -23,7 +23,7 @@ website:
         menu:
           - text: "About me"
             href: https://neelsmith.quarto.pub
-          - text: "More of my digital scholarship"
+          - text: "Digital scholarship"
             href: https://neelsmith.quarto.pub/digschol/
         aria-label: Home
 
