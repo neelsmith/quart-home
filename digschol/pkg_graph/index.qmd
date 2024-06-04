@@ -105,7 +105,7 @@ class CitableText,CitableObject,CitableImage,CiteEXchange cite
 class CitableCollection,CitableCorpus,CitablePhysicalText cite
 
 classDef mid fill:#baffc9
-class Orthography,CitableTeiReaders,EditionBuilders mid
+class Orthography,CitableTei Readers,EditionBuilders mid
 
 classDef ortho fill:#ffdfba
 class PolytonicGreek,AtticGreek,ManuscriptOrthography,GreekScientificOrthography,BiblicalHebrew,LatinOrthography,Lycian ortho

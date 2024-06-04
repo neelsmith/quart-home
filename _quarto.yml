@@ -17,6 +17,15 @@ website:
         file: julia/index.qmd
       
       - about.qmd
+    
+    right:
+      - icon: person-circle
+        menu:
+          - text: "About me"
+            href: https://neelsmith.quarto.pub
+          - text: "More of my digital scholarship"
+            href: https://neelsmith.quarto.pub/digschol/
+        aria-label: Home
 
   sidebar:
     - title: "Digital scholarship"
