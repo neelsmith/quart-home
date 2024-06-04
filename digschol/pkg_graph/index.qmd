@@ -3,21 +3,23 @@ title: "Relations of fundamental packages"
 ---
 
 Arrows indicate package dependencies.
-
 ```{mermaid}
 graph RL;
 CitableText --> CitableBase
 click CitableText "https://neelsmith.quarto.pub/citabletext/" "Citing texts"
+
 CitableObject --> CitableBase
 click CitableObject "https://neelsmith.quarto.pub/citableobject/" "Citing objects"
 CiteEXchange --> CitableBase
 click CiteEXchange "https://neelsmith.quarto.pub/citeexchange/" "Serializing citable data"
 
 
+
 CitableCorpus --> CitableText
 CitableCorpus --> CiteEXchange
 CitableCorpus --> CitableBase
 click CitableCorpus "https://neelsmith.quarto.pub/citablecorpus/" "Citable text corpora"
+
 
 CitableCollection --> CitableObject
 CitableCollection --> CiteEXchange
@@ -46,10 +48,10 @@ EditionBuilders --> CitableText
 EditionBuilders --> CitableCorpus
 click EditionBuilders "https://neelsmith.quarto.pub/editionbuilders/" "Make univocal editions"
 
+
 Orthography --> CitableCorpus
 Orthography --> CitableText
 click Orthography "https://neelsmith.quarto.pub/orthography/" "Orthographic systems"
-
 
 PolytonicGreek --> Orthography
 AtticGreek  --> Orthography
@@ -58,9 +60,9 @@ ManuscriptOrthography  --> PolytonicGreek
 GreekScientificOrthography  --> Orthography
 GreekScientificOrthography  --> PolytonicGreek
 
-
 BiblicalHebrew  --> Orthography
 LatinOrthography --> Orthography
+
 
 CitableParserBuilder --> CitableBase
 CitableParserBuilder --> CitableText
@@ -69,7 +71,6 @@ CitableParserBuilder --> CitableObject
 CitableParserBuilder --> Orthography
 click CitableParserBuilder "https://neelsmith.quarto.pub/citableparserbuilder/" "Build citable parsers"
 
-
 Kanones --> AtticGreek
 Kanones --> CitableBase
 Kanones --> CitableObject
@@ -77,11 +78,9 @@ Kanones --> CitableParserBuilder
 Kanones --> Orthography
 Kanones --> PolytonicGreek
 
-
 Tabulae --> CitableParserBuilder
 Tabulae --> CitableObject
 click Tabulae "https://neelsmith.quarto.pub/tabulae/" "Build Latin morphological parsers"
-
 
 CitableCorpusAnalysis --> CitableText
 CitableCorpusAnalysis --> CitableCorpus
@@ -96,27 +95,36 @@ Lycian --> CitableObject
 Lycian --> CitableParserBuilder
 
 
+
+
+
+
+
+classDef morph fill:#d8d4f2
+class CitableParserBuilder,Kanones,Tabulae morph
+
+classDef ortho fill:#ffdfba
+class PolytonicGreek,AtticGreek,ManuscriptOrthography,GreekScientificOrthography,BiblicalHebrew,LatinOrthography,Lycian ortho
+
 classDef base fill:#ffffba
 class CitableBase base
 click CitableBase "https://neelsmith.quarto.pub/citablebase/" "Build citable parser"
+
+
+classDef mid fill:#baffc9
+class CitableTeiReaders,EditionBuilders,Orthography mid
+
 
 classDef cite fill:#bae1ff
 class CitableText,CitableObject,CitableImage,CiteEXchange cite
 class CitableCollection,CitableCorpus,CitablePhysicalText cite
 
-classDef mid fill:#baffc9
-class Orthography,CitableTei Readers,EditionBuilders mid
-
-classDef ortho fill:#ffdfba
-class PolytonicGreek,AtticGreek,ManuscriptOrthography,GreekScientificOrthography,BiblicalHebrew,LatinOrthography,Lycian ortho
+class CitableBase,CitableText,CitableObject,CiteEXchange,CitableImage,CitableCorpus,CitableCollection,CitablePhysicalText,Orthography,CitableTeiReaders,EditionBuilders,CitableParserBuilder,Tabulae,PolytonicGreek quarto
 
 classDef quarto stroke-width:4,stroke:#1E90FF
 
-classDef morph fill:#d8d4f2
-class CitableParserBuilder,Kanones,Tabulae morph
-
-class CitableBase,CitableText,CitableObject,CiteEXchange,CitableImage,CitableCorpus,CitableCollection,CitablePhysicalText,Orthography,CitableTeiReaders,EditionBuilders,CitableParserBuilder,Tabulae quarto
 ```
+
 
 
 Color key:
