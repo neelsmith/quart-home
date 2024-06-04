@@ -5,7 +5,7 @@ title: "Relations of fundamental packages"
 Arrows indicate package dependencies.
 
 ```{mermaid}
-graph TD;
+graph RL;
 CitableText --> CitableBase
 click CitableText "https://neelsmith.quarto.pub/citabletext/" "Citing texts"
 CitableObject --> CitableBase
@@ -55,6 +55,9 @@ PolytonicGreek --> Orthography
 AtticGreek  --> Orthography
 ManuscriptOrthography  --> Orthography
 ManuscriptOrthography  --> PolytonicGreek
+GreekScientificOrthography  --> Orthography
+GreekScientificOrthography  --> PolytonicGreek
+
 
 BiblicalHebrew  --> Orthography
 LatinOrthography --> Orthography
@@ -105,7 +108,7 @@ classDef mid fill:#baffc9
 class Orthography,CitableTeiReaders,EditionBuilders mid
 
 classDef ortho fill:#ffdfba
-class PolytonicGreek,AtticGreek,ManuscriptOrthography,BiblicalHebrew,LatinOrthography,Lycian ortho
+class PolytonicGreek,AtticGreek,ManuscriptOrthography,GreekScientificOrthography,BiblicalHebrew,LatinOrthography,Lycian ortho
 
 classDef quarto stroke-width:4,stroke:#1E90FF
 
