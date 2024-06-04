@@ -26,9 +26,9 @@ All code linked from the following sections is  written in  [Julia](../julia/). 
 
 
 
-- [citation](../cite/)
-- [digital texts](../digitexts/)
-- a simple illustration: a brief notebook using Julia to apply ideas about citation and digital texts to [the American Declaration of Independence](../walkthrough/).
+1. [citation](../cite/)
+2. [digital texts](../digitexts/)
+3. a simple illustration: a brief notebook using Julia to apply ideas about citation and digital texts to [the American Declaration of Independence](../walkthrough/).
 
 ### Applications 
 
