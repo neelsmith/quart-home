@@ -54,7 +54,10 @@ Orthography --> CitableText
 click Orthography "https://neelsmith.quarto.pub/orthography/" "Orthographic systems"
 
 PolytonicGreek --> Orthography
+click PolytonicGreek "https://neelsmith.quarto.pub/polytonicgreek/" "PolytonicGreek"
 AtticGreek  --> Orthography
+click AtticGreek "https://neelsmith.quarto.pub/atticgreek/" "AtticGreek"
+
 ManuscriptOrthography  --> Orthography
 ManuscriptOrthography  --> PolytonicGreek
 GreekScientificOrthography  --> Orthography
@@ -139,19 +142,19 @@ graph TD;
 
  
 
-    classDef citeclass fill:#bae1ff,stroke-width:4,stroke:#1E90FF
+    classDef citeclass fill:#bae1ff,stroke:black
     class cite citeclass
     click cite "https://neelsmith.quarto.pub/cite/" "CITE core"
 
-    classDef midclass fill:#baffc9,stroke-width:4,stroke:#1E90FF
+    classDef midclass fill:#baffc9,stroke:black
     class mid midclass
     click mid "https://neelsmith.quarto.pub/digitexts/" "MID abstractions for digital text study"
 
-    classDef orthclass fill:#ffdfba,stroke-width:4,stroke:#1E90FF
+    classDef orthclass fill:#ffdfba,stroke:black
     class ortho orthclass
     click ortho "https://neelsmith.quarto.pub/digitexts/orthography/" "Orthographic systems"
 
-    classDef morphclass fill:#d8d4f2,stroke-width:4,stroke:#1E90FF
+    classDef morphclass fill:#d8d4f2,stroke:black
     class morph morphclass
     click morph "https://neelsmith.quarto.pub/digitexts/parsing/" "Morphological parsing"
 

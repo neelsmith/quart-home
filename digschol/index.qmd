@@ -20,7 +20,12 @@ While the discussion of this work could be read in a single sequence like a book
 
 All code linked from the following sections is  written in  [Julia](../julia/).   Documentation for each Julia package includes tutorials, "how-to" guides for particular tasks, and API documentation. The documentation was built with [Quarto](https://quarto.org/), so that all  examples of code output are generated from running source code, and all API documentation is extracted from the package's source code.
 
-- see a [graph showing relations](./pkg_graph/) among these packages.
+
+- see a [graph showing relations](./pkg_graph/) among these packages
+
+[![graph of package dependencies](./pkg_graph/pkggraph.png)](./pkg_graph/)
+
+
 
 ### Fundamentals: citation and textual analysis
 
