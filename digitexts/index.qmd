@@ -19,7 +19,7 @@ Overview: what's different about computational study of texts in historical lang
 
 
 
-[Orthography](../digitexts/orthography/)
+[Orthography](https://neelsmith.quarto.pub/orthography/)
 
 [Citable texts](../digitexts/editions/)
 
