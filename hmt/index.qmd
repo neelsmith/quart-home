@@ -7,6 +7,7 @@ title: "The Homer Multitext project"
 
 - The HMT archive on github, and the `HmtArchive` package
 - Manuscript orthography (the `ManuscriptOrthography`) package
+- the `HmtGutenberg` package for publishing pure-text editions of HMT project texts
 - Authority lists
 - A HMT Greek lexicon
 - Dashboards for exploring the digital archive
