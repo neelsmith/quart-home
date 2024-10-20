@@ -1,5 +1,6 @@
 ---
 title: "Morphological parsing"
+engine: julia
 ---
 
 :::{.callout-caution}

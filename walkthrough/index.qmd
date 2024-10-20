@@ -1,5 +1,6 @@
 ---
 title: "A walkthrough: the American Declaration of Independence"
+engine: julia
 ---
 
 ```{julia}

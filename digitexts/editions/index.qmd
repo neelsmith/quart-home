@@ -1,5 +1,6 @@
 ---
 title: "Building citable editions from structured text sources"
+engine: julia
 ---
 
 :::{.callout-caution}
