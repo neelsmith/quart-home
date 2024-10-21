@@ -1,0 +1,15 @@
+---
+title: "'Small digital' lexica"
+engine: julia
+description: "Talk about LSJ, LS and BDB."
+author:
+  - name: Neel Smith
+date: 2024-10-21
+categories: [small digital, lexica] 
+citation: 
+  url: https://neelsmith.quarto.pub/posts/2024-10-21-lexica/ 
+#image: Q.png
+draft: true # setting this to
+---
+
+## Digital lexica

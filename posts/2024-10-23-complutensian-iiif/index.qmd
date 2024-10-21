@@ -1,0 +1,24 @@
+---
+title: "The Complutensian Bible in IIIF"
+engine: julia
+description: "LoC hosed theirs; do it in small digital"
+author:
+  - name: Neel Smith
+date: 2024-10-24
+categories: [small digital, iiif, complutensian] # self-defined categories
+citation: 
+  url: https://neelsmith.quarto.pub/posts/2024-10-24-complutensian-iiif/ 
+#image: Q.png
+draft: true # setting this to
+---
+
+
+- no IIIF for BNE
+- LoC has been hosed for years but doesn't have resources or will to fix
+- if someon could host images, perfect for small digital
+
+Big infrastructure: HMT's UH
+
+- implement: algorithmically generate manifests and post
+- why not? make a pluto notebook!
+
