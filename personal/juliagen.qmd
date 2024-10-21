@@ -1,7 +1,0 @@
----
-title: "Software in Julia for genealogical work"
-engine: julia
----
-
-- GEDCOM
-- Obsidian

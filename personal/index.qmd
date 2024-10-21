@@ -1,9 +1,0 @@
----
-title: "Some historical and genealogical projects"
-engine: julia
----
-
-
-Some local historical research:
-
-- White family letters
