@@ -5,7 +5,7 @@ engine: julia
 
 
 
-I'm a soon-to-be emeritus professor at the College of the Holy Cross.  On this site, I'm beginning to gather some of the digital scholarly work I'm currently developing or maintaining.
+I'm an emeritus professor at the College of the Holy Cross.  On this site, I'm beginning to gather some of the digital scholarly work I'm currently developing or maintaining.
 
 
 I am especially interested in studying ancient texts using computational approaches that take account of both the textual contents and the non-textual features of physical artifacts, such as page layout, organization of contents in tabular structures, graphic elements like mathematical figures, or non-textual notation such as musical notation.

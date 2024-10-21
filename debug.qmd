@@ -4,6 +4,10 @@ engine: julia
 
 # Check or debug Quarto install
 
+::: {.callout-warning}
+Note that when this page was posted (Oct. 21, 2024), Quarto's julia engine only works with versions of Julia < 1.11.
+:::
+
 ```{julia}
 versioninfo()
 ```

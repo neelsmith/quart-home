@@ -1,0 +1,12 @@
+---
+engine: julia
+---
+
+# Current projects
+
+Some projects I'm currently working on
+
+- "semantic editions": digital editions of texts with significant non-textual material
+- a digital Complutensian polyglot Bible
+- the Homer Multitext project
+
