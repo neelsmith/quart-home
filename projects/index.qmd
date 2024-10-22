@@ -6,7 +6,9 @@ engine: julia
 
 Some projects I'm currently working on
 
+
+- a [digital Complutensian polyglot Bible](./digitalcomplutensian/)
 - "semantic editions": digital editions of texts with significant non-textual material
-- a digital Complutensian polyglot Bible
+
 - the Homer Multitext project
 
