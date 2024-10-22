@@ -17,9 +17,6 @@ website:
         file: projects/index.qmd    
       - text: "Digital infrastructure"
         file: digschol/index.qmd     
-      - text: "Why Julia?"
-        file: julia/index.qmd
-      
       - about.qmd
     
     right:

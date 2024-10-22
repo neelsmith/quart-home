@@ -7,4 +7,4 @@ listing:
   categories: true # allows you to sort posts by assigned categories 
 ---
 
-New section of the site coming soon.
+
