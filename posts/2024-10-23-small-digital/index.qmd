@@ -9,7 +9,7 @@ categories: [small digital, quarto] # self-defined categories
 citation: 
   url: https://neelsmith.quarto.pub/posts/2024-10-22-small-digital/ 
 image: Q.png
-draft: false # setting this to
+draft: true # setting this to
 ---
 
 ## Scholarly work and "small-digital" projects

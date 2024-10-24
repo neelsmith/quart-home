@@ -4,6 +4,7 @@ bibliography: "biblio.bib"
 
 date: last-modified 
 website:
+  site-url: "https://neelsmith.quarto.pub"
   title: "neelsmith"
   navbar:
     background: primary
