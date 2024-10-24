@@ -1,0 +1,38 @@
+---
+title: "'Small digital'"
+engine: julia
+description: "If we only focus on big projects, we're missing a lot of the value of digital scholarship."
+author:
+  - name: Neel Smith
+date: 2024-10-23
+categories: [small digital, quarto] # self-defined categories
+citation: 
+  url: https://neelsmith.quarto.pub/posts/2024-10-22-small-digital/ 
+image: Q.png
+draft: false # setting this to
+---
+
+## Scholarly work and "small-digital" projects
+
+In academia, "digital humanities" has become synonymous with big, grant-funded, multi-year projects. Some of these projects have succeeded in creating foundational resources for digital scholarship. (For one example, I'll be posting soon about the [International Image Interoperability Framework](https://iiif.io), or IIIF.)
+
+But if 
+
+- define small digital:
+
+small team or individual
+minimal tech infrastructure
+easily shared and replicated
+model of
+
+- value of small digital
+
+This post on "the two-culture problem" https://scientificcoder.com/my-target-audience
+
+## Working environments
+
+
+As I've commented before, [Julia is my go-to language for scholarly work](https://neelsmith.quarto.pub/posts/2024-10-22-why-julia/index.html).
+
+
+Quarto fits into this

@@ -11,12 +11,14 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - text: "News/comments"
+      - text: "Blog"
         file: posts.qmd        
       - text: "Projects"
         file: projects/index.qmd    
       - text: "Digital infrastructure"
         file: digschol/index.qmd     
+      - text: "Updates"
+        file: updates.qmd
       - about.qmd
     
     right:
