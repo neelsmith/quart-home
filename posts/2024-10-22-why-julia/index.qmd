@@ -4,10 +4,10 @@ engine: julia
 description: "Julia is my go-to language for digital scholarship."
 author:
   - name: Neel Smith
-date: 2024-10-24
+date: 2024-10-22
 categories: [julia] # self-defined categories
 citation: 
-  url: https://neelsmith.quarto.pub/posts/2024-10-24-why-julia/ 
+  url: https://neelsmith.quarto.pub/posts/2024-10-22-why-julia/ 
 image: julia.png
 draft: false
 ---

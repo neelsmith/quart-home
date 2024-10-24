@@ -9,3 +9,6 @@ listing:
 ---
 
 
+:::{.callout-tip title="RSS feed"}
+https://neelsmith.quarto.pub/posts.xml
+:::
