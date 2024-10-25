@@ -4,10 +4,9 @@ engine: julia
 
 # Current projects
 
-Some projects I'm currently working on
+Some projects I'm currently working on:
 
 
-- a [digital Complutensian polyglot Bible](https://neelsmith.quarto.pub/digitalcomplutensian)
+- a [digital Complutensian polyglot Bible](https://neelsmith.quarto.pub/digitalcomplutensian): digital resources for both experts and novices, supporting aligned multilingual reading 
 - "[semantic editions](https://neelsmith.quarto.pub/semanticeditions/)": digital editions of texts with significant non-textual material
-- the Homer Multitext project
-
+- the [Homer Multitext project](https://neelsmith.quarto.pub/hmt/):  a personal site about how I work with the Homer Multitext projet’s digital archive

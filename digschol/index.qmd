@@ -23,7 +23,7 @@ All code linked from the following sections is  written in  [Julia](../julia/). 
 
 - see a [graph showing relations](./pkg_graph/) among these packages
 
-[![graph of package dependencies](./pkg_graph/pkggraph.png)](./pkg_graph/)
+[![Graph of package dependencies](./pkg_graph/pkggraph.png)](./pkg_graph/)
 
 
 
@@ -35,10 +35,12 @@ All code linked from the following sections is  written in  [Julia](../julia/). 
 2. [digital texts](../digitexts/)
 3. a simple illustration: a brief notebook using Julia to apply ideas about citation and digital texts to [the American Declaration of Independence](../walkthrough/).
 
-### Applications 
+### Projects built on this infrastructure 
 
-- the [Homer Mulitext project](../hmt/): Julia packages and some applications.
-- [semantic editions](../semantic-editions/) of texts.  
+For examples of work built on this digital infrastructure, see the [projects section](../projects/) of this site.
+
+
+
 
 
 
