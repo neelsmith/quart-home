@@ -12,5 +12,5 @@ listing:
 
 
 :::{.rsstag}
-[RSS](https://neelsmith.quarto.pub/posts.xml)
+[RSS feed](https://neelsmith.quarto.pub/posts.xml)
 :::

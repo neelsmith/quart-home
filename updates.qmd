@@ -10,7 +10,7 @@ listing:
 
 
 :::{.rsstag}
-[RSS](https://neelsmith.quarto.pub/updates.xml)
+[RSS feed](https://neelsmith.quarto.pub/updates.xml)
 :::
 
 News about releases and updates to documentation of Julia packages.
