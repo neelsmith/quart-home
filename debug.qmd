@@ -1,5 +1,7 @@
 ---
 engine: julia
+execute:
+  freeze: false 
 ---
 
 # Check or debug Quarto install
