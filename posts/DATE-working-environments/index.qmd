@@ -1,0 +1,28 @@
+---
+title: "Working environments for digital scholarship"
+engine: julia
+description: "If we only focus on big projects, we're missing a lot of the value of digital scholarship."
+author:
+  - name: Neel Smith
+date: 2024-10-27
+categories: [small digital, quarto, julia] # self-defined categories
+citation: 
+  url: https://neelsmith.quarto.pub/posts/2024-10-27-working-environments/ 
+image: Q.jpeg
+draft: true # setting this to false publishes it
+
+---
+
+
+
+### Working environments
+
+
+As I've commented before, [Julia is my go-to language for scholarly work](https://neelsmith.quarto.pub/posts/2024-10-22-why-julia/index.html).
+
+
+Quarto is so cool!
+
+Pluto notebooks are so cool!
+
+

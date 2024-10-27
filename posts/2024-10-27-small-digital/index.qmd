@@ -1,0 +1,35 @@
+---
+title: "'Small digital'"
+engine: julia
+description: "If we only focus on big projects, we're missing a lot of the value of digital scholarship."
+author:
+  - name: Neel Smith
+date: 2024-10-27
+categories: [small digital, quarto] # self-defined categories
+citation: 
+  url: https://neelsmith.quarto.pub/posts/2024-10-27-small-digital/ 
+image: 2cultures.jpeg
+draft: false # setting this to false publishes it
+
+---
+
+## Scholarly work and "small-digital" projects
+
+In academia, "digital humanities" has become almost synonymous with big, grant-funded, multi-year projects. Some of these projects have succeeded in creating foundational resources for digital scholarship. (For one example, I'll be posting here in the near future about some of my current work relying on one of those resources, the [International Image Interoperability Framework](https://iiif.io), or IIIF.) But what I'll call "small digital" work is essential if we hope to realize the potential of digital scholarship.
+
+By "small digital," I mean work with minimal technical prerequisites carried out by a small team or even an individual scholar that can be easily shared and replicated. "Small digital" is a natural fit for exploratory or experimental work, in contrast to the prior enumeration of "deliverables" that grant funding often requires. Small digital also offers a comfortable home for scholars whose research includes writing code. While such scholars are not in principle excluded from large digital humanities projects, in practice multi-year grants often divide participants between technology specialists (programmers) and content specialists ("scholars"). And since university departments already have tenure-line positions for "scholars," the technology specialists are frequently supported by limited-term positions funded by soft money. Far easier for a university to take the overhead charges of a grant than create new tenure lines. Talented scholars who write code can find themselves stuck on a treadmill of temporary positions that ultimately define their career arc more as "tech support" than "academic," and thus further institutionalize the false dichotomy of coding and research. 
+
+
+
+!["Scientific coders"[^1]](./2cultures.jpeg)
+
+
+
+
+The blogger Matthijs Cox refers to "scientific coders" falling between scientists who write no code and developers who only code what scientists direct them to implement, but his description of what he calls "[the two-culture problem](https://scientificcoder.com/my-target-audience)" is equally applicable to work in digital humanities.
+
+
+ 
+
+
+[^1]: Matthijs Cox, "My Target Audience" ©2024 The Scientific Coder, https://scientificcoder.com/my-target-audience.
