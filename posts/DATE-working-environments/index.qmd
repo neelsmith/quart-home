@@ -8,7 +8,7 @@ date: 2024-10-27
 categories: [small digital, quarto, julia] # self-defined categories
 citation: 
   url: https://neelsmith.quarto.pub/posts/2024-10-27-working-environments/ 
-image: Q.jpeg
+image: Q.png
 draft: true # setting this to false publishes it
 
 ---
