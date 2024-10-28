@@ -28,14 +28,10 @@ Small digital also offers a comfortable home for scholars whose research include
 
 
 
-The blogger Matthijs Cox discusses what he calls "[the two-culture problem](https://scientificcoder.com/my-target-audience)" in the natural sciences. Cox wants to support "scientific coders," who work in between traditional categories of "scientists" and "developers". The idea of a "two-culture problem" certainly applies equally well (and perhaps even better) to the humanities, where the division is often between scholars who write *no* code, and developers who implement only what the scholars direct. We could generalize Cox's phras to "scholarly coders," whether in the natural sciences or the humanities. I would reverse adjective and noun, however: I think the broader category is more like "coding scholars" (that is, scholars who write code as part of their research: "scholars who code" might be an easier expression in English).
+The blogger Matthijs Cox discusses what he calls "[the two-culture problem](https://scientificcoder.com/my-target-audience)" in the natural sciences. Cox wants to support "scientific coders," who work in between traditional categories of "scientists" and "developers". The idea of a "two-culture problem" certainly applies equally well (and perhaps even better) to the humanities, where the division is often between scholars who write *no* code, and developers who implement only what the scholars direct. We could generalize Cox's phrase to "scholarly coders," whether in the natural sciences or the humanities. I would reverse adjective and noun, however: I think the broader category is more like "coding scholars" (that is, scholars who write code as part of their research: "scholars who code" might be an easier expression in English).
 
 
-Most of the work I discuss on this site fits my definition of "small digital." The purely technical barriers for coding scholars have never been lower; thoughtful use of AI to write code may already be dramatically lowering the level of coding skills needed to work as a scholar writing code. 
-
-
-Like Matthijs Cox, I have found [the Julia language](../2024-10-22-why-julia/) to be especially apt for my scholarly work. 
-
+Most of the work I discuss on this site fits my definition of "small digital." The purely technical barriers for coding scholars have never been lower, and thoughtful use of AI to write code may already be lowering the level of coding skills needed to work as a scholar writing code. Posts will include working examples of code as well as links to full sources. Like Matthijs Cox, I have found [the Julia language](../2024-10-22-why-julia/) to be especially apt for my scholarly work, and it would be wonderulf if, like Cox's site, the examples I'm collecting here are useful to any other scholars who code. I hope that they will in any case illustrate how readily within reach "small digital" scholarship can be.
 
 
 
