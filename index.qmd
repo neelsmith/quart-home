@@ -11,10 +11,13 @@ I'm an emeritus professor at the College of the Holy Cross.  On this site, I'm b
 I am especially interested in studying ancient texts using computational approaches that take account of both the textual contents and the non-textual features of physical artifacts, such as page layout, organization of contents in tabular structures, graphic elements like mathematical figures, or non-textual notation such as musical notation.
 
 
-::: {.callout-tip title="Status of this site"}
+## Status of this site
 
-Most of the sections on this site are still highly incomplete. All pages include a "Published" date showing when the page was last modified. Two RSS feeds track changes and news:
+Most of the sections on this site are still highly incomplete. All pages include a "Published" date showing when the page was last modified. 
 
-- [https://neelsmith.quarto.pub/posts.xml](https://neelsmith.quarto.pub/posts.xml) : additions to or substantial revisions of the web site
-- [https://neelsmith.quarto.pub/updates.xml](https://neelsmith.quarto.pub/updates.xml) : new releases of Julia packages or updates to package documentation
+
+::: {.callout-tip appearance="minimal" title="<i class=\"bi bi-rss\"></i> RSS feeds to follow changes and news"}
+
+- [additions to or substantial revisions of the web site](https://neelsmith.quarto.pub/posts.xml) 
+- [new releases of Julia packages or updates to package documentation](https://neelsmith.quarto.pub/updates.xml)
 :::
