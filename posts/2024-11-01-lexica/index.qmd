@@ -1,0 +1,62 @@
+---
+title: "'Small digital' lexica"
+engine: julia
+description: "Search and format articles from Greek and Latin lexica in Julia."
+author:
+  - name: Neel Smith
+date: 2024-11-01
+categories: [small digital, julia, lexica] 
+citation: 
+  url: https://neelsmith.quarto.pub/posts/2024-11-01-lexica/ 
+image: grammatik.png
+draft: false # setting this to false publishes it
+---
+
+## Digital lexica
+
+
+Liddell and Scott's *Greek Lexicon* must rank among the nineteenth century's greatest contributions to infrastructure for the study of the Greco-Roman world. Even after its 1940 revision and expansion by Henry Stuart Jones (hence the usual abbreviation *LSJ*), the contents of the lexicon remain largely unchanged. Readers of *LSJ* have to allow for the assumptions of Victorian Englishmen and navigate their sometimes unfamiliar language, *LSJ*'s organization of articles in a historical development of senses, supported by abundant citations of illustrative examples, 
+
+
+[^lsj]: For Jones
+
+LSJ; LS
+
+Blackwell's markdown versions:
+
+- https://github.com/Eumaeus/cite_lsj_cex
+- https://github.com/Eumaeus/cex_lewis_and_short
+
+
+My scripts:
+
+- https://github.com/neelsmith/liddell-scott
+- https://github.com/Eumaeus/cex_lewis_and_short
+
+
+
+Why?
+
+- use off line
+- 
+
+
+```
+using Downloads
+readerurl = "https://raw.githubusercontent.com/neelsmith/lewis-short/refs/heads/main/reader.jl"
+
+script = Downloads.download(readerurl)
+include(script)
+rm(script)
+#text("Cic.") 
+lemma("echinus") |> Markdown.parse
+```
+
+
+```
+using Markdown
+script = Downloads.download(readerurl)
+include(script)
+rm(script)
+#lemma("echinus") |> Markdown.parse
+```
