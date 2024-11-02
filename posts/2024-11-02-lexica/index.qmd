@@ -1,0 +1,73 @@
+---
+title: "'Small digital' lexica"
+engine: julia
+description: "The progression of two Greek and Latin lexica from print, to big-digital, to small-digital use."
+author:
+  - name: Neel Smith
+date: 2024-11-02
+categories: [small digital, julia, lexica] 
+citation: 
+  url: https://neelsmith.quarto.pub/posts/2024-11-02-lexica/ 
+image: hedgehog.png
+draft: false # setting this to false publishes it
+---
+
+## Digital lexica for Greek and Latin
+
+### From the nineteenth century to "big-digital" projects
+
+Liddell and Scott's *Greek Lexicon* must rank among the nineteenth century's greatest contributions to infrastructure for the study of the Greco-Roman world. Even after its 1940 revision and expansion by Henry Stuart Jones (hence its usual abbreviation *LSJ*), the contents of the lexicon remain largely unaltered. While readers of *LSJ* have to allow for the assumptions of Victorian Englishmen and navigate its sometimes unfamiliar language, its organization of articles in a historical development of senses, supported by abundant citations of illustrative examples, remains valuable.  Lewis and Short's *Latin Dictionary* covers a wide range of Latin beyond the narrow classical period, and like *LSJ* includes illustrative citations for each sense of its definitions. 
+
+*LSJ* and *Lewis and Short* share another feature that makes them especially important today: they are both in the public domain. The Perseus Project has digitized both lexica in XML following the guidelines of the [Text Encoding Initiative](https://www.tei-c.org) (TEI), and made the XML available under a Creative Commons license. Unlike some more recent lexica, therefore, the Perseus lexica be used in digital scholarship.[^perseus] A fine example of this reuse is Giuseppe Celano's reformatted *LSJ*. The original Perseus *LSJ* (digitized forty years ago before there was a Unicode standard!) encoded Greek using the Beta Code transcription system. Celano has published a TEI-compliant *LSJ* with the Beta Code transcription coverted to codepoints for Unicode Greek; his *LSJ* is also licensed for free reuse.[^giuseppe]  To the best of my knowledge, all digital versions of *LSJ* and *Lewis and Short* that I have encountered in digital scholarship ulimately derive from the Perseus XML source, a perfect example of how a "big-digital" project can change our scholarly infrastructure.
+
+
+
+
+[^giuseppe]: See Celano's github repository [LSJ_GreekUnicode](https://github.com/gcelano/LSJ_GreekUnicode).
+
+
+[^perseus]: The complete XML source for both lexica is available from [this github repository](https://github.com/PerseusDL/lexica/). The lexica are currently (November, 2024) available under the terms of the Creative Commons Attribution-ShareAlike 4.0 International License.
+
+### "Small-digital" reuse
+
+The Perseus encoding of *LSJ* and of *Lewis and Short* strives to capture the full semantics expressible by following the TEI guidelines. Theoretically, you could use the Perseus XML to find etymological and morphological information about individual entries, as well as translations distinguished by senses and accompanied by citations. In practice, however, applications using the digital lexica have generally opted to present readers with whole articles, with the rich semantics of the TEI markup  reduced to typographic conventions like the original print vesion (e.g., terms tagged as `foreign` may be italicized). It is left to the human reader to recognize what visual styling 
+
+
+Blackwell's markdown versions:
+
+- https://github.com/Eumaeus/cite_lsj_cex
+- https://github.com/Eumaeus/cex_lewis_and_short
+
+
+My scripts:
+
+- https://github.com/neelsmith/liddell-scott
+- https://github.com/Eumaeus/cex_lewis_and_short
+
+
+
+Why?
+
+- use off line
+- 
+
+
+```
+using Downloads
+readerurl = "https://raw.githubusercontent.com/neelsmith/lewis-short/refs/heads/main/reader.jl"
+
+script = Downloads.download(readerurl)
+include(script)
+rm(script)
+#text("Cic.") 
+lemma("echinus") |> Markdown.parse
+```
+
+
+```
+using Markdown
+script = Downloads.download(readerurl)
+include(script)
+rm(script)
+#lemma("echinus") |> Markdown.parse
+```
