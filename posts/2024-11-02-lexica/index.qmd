@@ -50,12 +50,15 @@ In Julia, we can split the row into columns and assign each column to a variable
 Markdown parsing is part of the Julia language, but it's not automatically loaded. Once we explicitly use the package, we can create a Markdown string object by parsing a regular string. Julia's IO system will display this object appropriately in environments ranging from the Juilia REPL to [Quarto](https://quarto.org) (used to generate this web page).
 
 
+#### Markdown in Quarto output
+
 ```{julia}
 using Markdown
 hdr = "`Article parsed from Markdown source`:\n"
 Markdown.parse(hdr * article)
 ```
 
+#### Markdown in a Julia REPL
 
 Here's a screen shot of the same code run in a Julia REPL:
 
@@ -64,8 +67,9 @@ Here's a screen shot of the same code run in a Julia REPL:
 
 Now we're in a small-digital world: we can easily share and replicate this simple parsing of delimited-text data using only [the Julia language](https://neelsmith.quarto.pub/posts/2024-10-22-why-julia/index.html).
 
-### Small-digital scripts
+### Some small-digital scripts
 
+There are a few reasons 
 My scripts:
 
 - https://github.com/neelsmith/liddell-scott
@@ -76,7 +80,9 @@ My scripts:
 Why?
 
 - use off line
-- 
+- incorporate into my own small-digital projects
+
+An unexpectedly useful kludge: see summary line!
 
 
 
