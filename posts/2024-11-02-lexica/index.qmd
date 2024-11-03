@@ -30,14 +30,41 @@ Liddell and Scott's *Greek Lexicon* must rank among the nineteenth century's gre
 
 ### "Small-digital" reuse
 
-The Perseus encoding of *LSJ* and of *Lewis and Short* strives to capture the full semantics expressible by following the TEI guidelines. Theoretically, you could use the Perseus XML to find etymological and morphological information about individual entries, as well as translations distinguished by senses and accompanied by citations. In practice, however, applications using the digital lexica have generally opted to present readers with whole articles, with the rich semantics of the TEI markup  reduced to typographic conventions like the original print vesion (e.g., terms tagged as `foreign` may be italicized). It is left to the human reader to recognize what visual styling 
+The Perseus encoding of *LSJ* and of *Lewis and Short* strives to capture the full semantics expressible under the TEI guidelines. Theoretically, you could use the Perseus XML to find etymological and morphological information about individual entries, as well as translations distinguished by senses and accompanied by citations. In practice, however, applications using the digital lexica have generally opted to present readers with whole articles, with the rich semantics of the TEI markup  reduced to typographic conventions like the original print vesion (e.g., terms tagged as `foreign` may be italicized). It is left to the human reader to recognize the meaning implied by visual styling. For these applications, the TEI markup is actually an obstacle, since it requires recursive parsing of its complex XML structures to format a single readable string for an article.
+
+Christopher Blackwell has published editions of the two lexica that obviate this problem.[^eumaeus] The dictionary is represented as a collection of articles, formatted as a simple delimited-text table in four columns: a sequence number, an identifier, a headword, and a single string for the article.
+
+Here's an example of a single row from his *Lewis and Short*, assigned to a variable in Julia.  Columns are separated by the pound sign `#`.
+
+```{julia}
+entry = """15100#urn:cite2:hmt:ls.markdown:n15097#echinus1#ĕchīnus, i, m., = ἐχῖνος, `I` *a hedgehog*, *urchin.* `I` Prop., usually the (edible) *sea-urchin*, Echinus esculentus, Linn.; Varr. L. L. 5, § 77 Müll.; Afran. ap. Non. 216, 11; Plin. 9, 31, 51, § 100 sq.; Hor. Epod. 5, 28; id. S. 2, 4, 33; 2, 8, 52; id. Ep. 1, 15, 23; Petr. 69, 7.— *The land-urchin* (otherwise called erinaceus), Claud. Idyll. 2, 17; cf. Isid. Orig. 12, 6, 57.— `II` Transf., of things having a similar shape. `I.A` *A copper vessel for the table*, perh. to wash out the cups in, *a rinsing-bowl*, Hor. S. 1, 6, 117, v. Heindorf, ad h. l.; id. ib. 2, 8, 52.— `I.B` *The prickly husk of a chestnut*, Calp. Ecl. 2, 83; Pall. Insit. 155.— `I.C` In archit., *an ornament under the chapiter of a Doric or Ionic column*, *an echinus*, Vitr. 4, 3, 4; 4, 7, 3; cf. Müller, Archaeol. § 277. """
+```
+
+In Julia, we can split the row into columns and assign each column to a variable in a single line:
+
+```{julia}
+(sequence, urn, headword, article) = split(entry, "#")
+```
 
 
-Blackwell's markdown versions:
+Markdown parsing is part of the Julia language, but it's not automatically loaded. Once we explicitly use the package, we can create a Markdown string object by parsing a regular string. Julia's IO system will display this object appropriately in environments ranging from the Juilia REPL to [Quarto](https://quarto.org) (used to generate this web page).
 
-- https://github.com/Eumaeus/cite_lsj_cex
-- https://github.com/Eumaeus/cex_lewis_and_short
 
+```{julia}
+using Markdown
+hdr = "`Article parsed from Markdown source`:\n"
+Markdown.parse(hdr * article)
+```
+
+
+Here's a screen shot of the same code run in a Julia REPL:
+
+![Screen shot of parsed Markdown displayed in a Julia REPL](./MD-in-REPL.png)
+
+
+Now we're in a small-digital world: we can easily share and replicate this simple parsing of delimited-text data using only [the Julia language](https://neelsmith.quarto.pub/posts/2024-10-22-why-julia/index.html).
+
+### Small-digital scripts
 
 My scripts:
 
@@ -50,6 +77,11 @@ Why?
 
 - use off line
 - 
+
+
+
+
+
 
 
 ```
@@ -71,3 +103,12 @@ include(script)
 rm(script)
 #lemma("echinus") |> Markdown.parse
 ```
+
+
+
+
+[^eumaeus]: Github repositories for Blackwell's lexica with article forammted in Markdown :
+
+    - [Markdown edition of *LSJ*](https://github.com/Eumaeus/cite_lsj_cex)
+    - [Markdown edition of *Lewis and Short*](https://github.com/Eumaeus/cex_lewis_and_short)
+
