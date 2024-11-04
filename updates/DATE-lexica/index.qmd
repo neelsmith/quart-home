@@ -1,0 +1,15 @@
+---
+title: "Updates to interactive lexica"
+engine: julia
+description: "I've done some stuff..."
+author:
+  - name: Neel Smith
+date: 2024-11-05
+categories: [lexica] # self-defined categories
+image: RSS.png
+draft: false
+---
+
+# LSJ + Lewis-Short
+
+Built out an easy kludge: count results
