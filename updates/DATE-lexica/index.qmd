@@ -6,8 +6,7 @@ author:
   - name: Neel Smith
 date: 2024-11-05
 categories: [lexica] # self-defined categories
-image: RSS.png
-draft: false
+draft: true
 ---
 
 # LSJ + Lewis-Short
