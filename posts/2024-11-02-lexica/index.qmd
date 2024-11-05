@@ -9,7 +9,7 @@ categories: [small digital, julia, lexica]
 citation: 
   url: https://neelsmith.quarto.pub/posts/2024-11-02-lexica/ 
 image: hedgehog.png
-draft: false # setting this to false publishes it
+draft: true # setting this to false publishes it
 ---
 
 ## Digital lexica for Greek and Latin
