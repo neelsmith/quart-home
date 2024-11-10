@@ -1,0 +1,16 @@
+---
+title: "New package: OpenScripturesHebrew.jl"
+engine: julia
+description: "A new Julia package for working with data from the Open Scriptures Hebrew Bible."
+author:
+  - name: Neel Smith
+date: 2024-11-13
+categories: [morphology, hebrew] # self-defined categories
+image: ../newpackage.png
+draft: true
+
+---
+
+A new julia package!
+
+
