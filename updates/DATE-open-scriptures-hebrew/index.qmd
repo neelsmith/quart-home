@@ -6,7 +6,7 @@ author:
   - name: Neel Smith
 date: 2024-11-13
 categories: [morphology, hebrew, new release] # self-defined categories
-image: ../newpackage.png
+image: ../new-package.png
 draft: true
 
 ---
