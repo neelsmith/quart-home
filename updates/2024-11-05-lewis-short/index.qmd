@@ -5,7 +5,7 @@ description: "New options for using a local dataset, and counting results."
 author:
   - name: Neel Smith
 date: 2024-11-05
-categories: [lexica] # self-defined categories
+categories: [lexica, update] # self-defined categories
 image: ../newrelease2.png
 draft: false
 
