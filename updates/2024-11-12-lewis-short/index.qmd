@@ -4,7 +4,7 @@ engine: julia
 description: "Corrects an error in usage instructions."
 author:
   - name: Neel Smith
-date: 2024-11-05
+date: 2024-11-12
 categories: [lexica, latin, bug fix] # self-defined categories
 image: ../bugfix.png
 draft: false
