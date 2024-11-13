@@ -5,7 +5,7 @@ description: "A new Julia package for working with data from the Open Scriptures
 author:
   - name: Neel Smith
 date: 2024-11-13
-categories: [morphology, hebrew, new release] # self-defined categories
+categories: [morphology, hebrew, new package] # self-defined categories
 image: ../new-package.png
 draft: false
 
