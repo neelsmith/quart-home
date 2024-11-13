@@ -1,7 +1,7 @@
 ---
 title: "The Complutensian Bible in IIIF"
 engine: julia
-description: "Make your own replacement for the Library of Congress' broken manifest."
+description: "Tailor image resources to your own project with a IIIF manifest."
 author:
   - name: Neel Smith
 date: 2024-11-13
@@ -9,13 +9,51 @@ categories: [small digital, iiif, complutensian] # self-defined categories
 citation: 
   url: https://neelsmith.quarto.pub/posts/2024-10-24-complutensian-iiif/ 
 image: ../imgs/comp-in-tify.png
-draft: true # setting this to
+draft: false # setting this to false publishes it
 ---
 
 
-- no IIIF for BNE
-- LoC has been hosed for years but doesn't have resources or will to fix
+## Image resources from "big-digital" projects
+
+One project I'm currently working on is a [digital multilingual Bible, inspired by the sixteenth-century Complutensian polyglot](https://neelsmith.quarto.pub/digitalcomplutensian/). The Biblioteca Nacional de España (BNE) has digitized its copy as part of its [Biblioteca Digital Hispánica](https://bdh.bne.es/bnesearch/Inicio.do). You can browse the BNE's Complutensian Bible interactively [here](http://bdh-rd.bne.es/viewer.vm?id=0000050739&page=1).  
+
+Even better, the BNE participated in the [World Digital Library](https://www.loc.gov/collections/world-digital-library/about-this-collection/) project, an extensive collection of digitized cultural heritage materials assembled under the leadership of the Library of Congress with support from UNESCO. As a result, the high-quality images of the BNE's Complutensian Bible are available without restrictions, and documented following the standards of the [International Image Interoperability Framework](https://iiif.io) (IIIF). 
+
+These are examples of large DH projects at their best: investing in creating high-quality primary source material, and guaranteeing by their use of open technologies and open legal licensing that the resources will be as widely reusable as possible. My work on the Complutensian polyglot would not have been possible without this digital infrastructure. The well documented JSON format of the [IIIF Presentation Manifests](https://iiif.io/api/presentation/3.0/) makes it straightforward to explore a collection of images in a "small-digital" project.
+
+
+
+
+
+For the WDL, the Library of Congress has organized the publication of the Complutensian Bible in five IIIF manifests [as seen here](https://www.loc.gov/item/2021666855/).
+ 
+
+
+[![Part of the Library of Congress web page for the Complutensian Bible](./LoC.png)](https://www.loc.gov/item/2021666855)
+
+ The thumbnails in the illustration above correctly lead to browsable images, but all of the links for IIIF manifests actually point to the same manifest (the first of the five). It's not possible to find associated data for four of the five image collections.
+
+
+This illustrates a problem familiar from other digital infrastructure projects. Even large institutions may lack the reasons for continued curation of digital material once the initial project has reached the end of its term.  When I reported the erroneous links to the Library of Congress in 2023, I was told that this was already a known problem. "The Digital Collections team ... don't have an ETA for a fix though, sorry."
+
+
+## Custom IIIF manifests to the rescue
+
+The hard work had been done: the physical volumes had been conserved, photographed and documented.  All I really needed was a series of IIIF manifests --  simple JSON files that are perfect candidates for automated generation.
+
+I considered trying to write manifests that would provide information for the images already hosted at the Library of Congress, but I couldn't discover or correctly guess the configuration of the files' organization on the LoC server.  The images were openly licensed, however, and I was fortunate to have access through the [Homer Multitext project](https://neelsmith.quarto.pub/hmt/) to an IIIF-compliant image server at the University of Houston's High-Perormance Computing Center, so I decided to download all of the images hosted at the Library of Congress, and serve them from Houston.
+
+At that point, 
+
+:::{.callout-caution title="Caution: work in progress"}
+At the time of this blog post, I've correctly processed and uploaded almost all of the images of the Complutensian Bible to the University of Houston IIIF service, but a series of pages beginning in the book of *Deuteronomy* are not yet in place.
+:::
+
+
 - if someone could host images, perfect for small digital
+
+WDL collections
+[wdl]()
 
 Big infrastructure: HMT's UH
 
@@ -25,3 +63,7 @@ Big infrastructure: HMT's UH
 
 ![Volume 1 of the BNE Complutensian in Tify](./complutensian-iiif.png)
 
+Presentation API:
+
+
+I'll add a later post on how easy it is to incorporate IIIF resources into interactive Pluto notebooks.
