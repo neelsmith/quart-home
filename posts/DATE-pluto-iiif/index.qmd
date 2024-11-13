@@ -4,7 +4,7 @@ engine: julia
 description: "Tidy library makes it easy"
 author:
   - name: Neel Smith
-date: 2024-10-22
+date: 2024-11-23
 categories: [small digital, iiif, tify] # self-defined categories
 citation: 
   url: https://neelsmith.quarto.pub/posts/2024-10-24-pluto-iiif/ 
