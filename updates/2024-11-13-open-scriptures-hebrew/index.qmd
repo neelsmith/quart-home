@@ -7,7 +7,7 @@ author:
 date: 2024-11-13
 categories: [morphology, hebrew, new release] # self-defined categories
 image: ../new-package.png
-draft: true
+draft: false
 
 ---
 
