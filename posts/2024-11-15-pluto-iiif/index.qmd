@@ -1,0 +1,40 @@
+---
+title: "Add a IIIF browser to your Pluto notebooks"
+engine: julia
+description: "The TIFY library makes it easy"
+author:
+  - name: Neel Smith
+date: 2024-11-15
+categories: [small digital, iiif, tify] # self-defined categories
+citation: 
+  url: https://neelsmith.quarto.pub/posts/2024-11-15-pluto-iiif/ 
+image: ../imgs/comp-in-tify.png
+draft: false # setting this to false publishes it
+---
+
+Pluto notebooks run in a web browser, and are *reactive*: if you change one cell, every cell depending on it automatically updates. You write Pluto notebooks in Julia: in contrast to, say Jupyter, every cell in a Pluto notebook is simply a Julia expression. 
+
+It's also easy to interact with the HTML, CSS and javascript in a notebook's web page using the `HypertextLiteral` package. (For full details ee [this guide](https://featured.plutojl.org/web/javascript).) This post will show you how to add to a Pluto notebook an interactive display of the images in a IIIF manifest in just three steps.
+
+
+
+## A IIIF browser in three steps
+
+[TIFY](https://tify.rocks) is a 
+
+
+![Browsing IIIF manifests on TIFY's home page](./tify-home.png)
+
+
+- easy to roll in JS: see Fons' guide
+https://featured.plutojl.org/web/javascript
+
+
+- Tify is easy to embed
+
+Build a Pluto nb with about 5 cells...
+
+
+## Version 2: let the user select a manifest
+
+
