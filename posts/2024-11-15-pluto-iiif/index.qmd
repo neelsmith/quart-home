@@ -1,7 +1,7 @@
 ---
 title: "Add a IIIF browser to your Pluto notebooks"
 engine: julia
-description: "The TIFY library makes it easy"
+description: "The TIFY library makes it easy to include an interactive IIIF browser in your Pluto notebooks."
 author:
   - name: Neel Smith
 date: 2024-11-15
