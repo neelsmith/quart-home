@@ -1,4 +1,4 @@
 - source: project
   quarto-pub:
     - id: 4fac9072-8424-4a3e-8a86-642c66e9067a
-      url: 'https://neelsmith.quarto.pub/neelsmith'
+      url: https://neelsmith.quarto.pub/neelsmith
