@@ -1,0 +1,28 @@
+---
+title: "New IIIF manifests for the Complutensian Bible"
+engine: julia
+description: "New, automatically generated IIIF manifests coordinate images with quire/page identifiers."
+author:
+  - name: Neel Smith
+date: 2025-01-09
+categories: [small digital, iiif, complutensian] # self-defined categories
+citation: 
+  url: https://neelsmith.quarto.pub/posts/2025-01-09-updates-to-iiif/ 
+image: ../imgs/comp-in-tify.png
+draft: true # setting this to false publishes it
+---
+
+## Updated IIIF manifests
+
+- initial manifest was just to make sense of images not cataloged on LoC. (See here: https://neelsmith.quarto.pub/posts/2024-11-13-complutensian-iiif/index.html)
+
+- since then, have completed quire analysis of all 6 volumes.
+
+- updated versions of main manifests for each volume identify pages by quire/page
+
+- did this with new version of `CitablePhysicalText` package: genreated directly from codex model.
+
+- this means: every image tested!
+
+https://neelsmith.quarto.pub/digitalcomplutensian/resources/images/
+
