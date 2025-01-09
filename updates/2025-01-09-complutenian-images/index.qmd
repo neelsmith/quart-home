@@ -59,7 +59,6 @@ configs = iiifconfig.(manifestids)
 
 
 codexurls = ["https://raw.githubusercontent.com/neelsmith/complutensian-texts/refs/heads/main/codex/bne_v$(i).cex" for i in 1:6]
-#codexfiles = [joinpath(repo, "codex", "bne_v$(i).cex") for i in 1:6]
 codices = [fromcex(f, Codex, UrlReader)[1] for f in codexurls]
 
 totalpages = [length(c.pages) for c in codices] |> sum

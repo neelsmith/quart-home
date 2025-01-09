@@ -1,7 +1,7 @@
 ---
 title: "New IIIF manifests for the Complutensian Bible"
 engine: julia
-description: "New, automatically generated IIIF manifests coordinate images with quire/page identifiers."
+description: "New, automatically generated IIIF manifests coordinate images with quire/page identifiers and guarantee valid image references."
 author:
   - name: Neel Smith
 date: 2025-01-09
@@ -13,25 +13,83 @@ draft: false # setting this to false publishes it
 ---
 
 
-## Why
+## Coordinating images with pages
 
 I first cobbled together IIIF manifests for each of the six volumes of the Computensian Bible so that I could browse and try to make sense of the images that were not documented on the web site where the Library of Congress published the openly licensed images. (Here's [the complicated story](https://neelsmith.quarto.pub/posts/2024-11-13-complutensian-iiif/index.html).)
 
-I've updated the IIIF manifests to address a second challenge for anyone  studying the Complutensian Bible. While all copies have essentially the same contents in each volume, they order the various sections of reference material in volumes 5 and 6 differently. In fact, of the seven copies I have been able to examine, each has a unique sequence of pages in volume 6!   Refering to pages by sequential page number wouldn't make sense.
-
-I have been able to complete a quire analysis of all six volumes. Most of the Complutensian was printed in ternions, or groups of three sheets. Each sheet is a double folio, so when stacked in a gather, or quire, of three sheets, each quire has six folios. Each folio has a front (recto) and back (verso) side -- what we would consider a printed page, so the six folios of each ternion comprise twelve pages.
+I've now updated the IIIF manifests to address a second challenge for anyone  studying the Complutensian Bible. While all copies have essentially the same contents in each volume, they order the various sections of reference material in volumes 5 and 6 differently. In fact, of the seven copies I have been able to examine, each has a unique sequence of pages in volume 6! Refering to pages by sequential page number wouldn't make sense.
 
 
- and have now updated the manifests to identify 
-
-- since then, have completed quire analysis of all 6 volumes.
-
-- updated versions of main manifests for each volume identify pages by quire/page
+We can instead safely identify pages by their organization in printed quires. Most of the Complutensian was printed in ternions, or groups of three sheets. Each sheet is a double folio, so when stacked in a gather, or quire, of three sheets, each quire has six folios. (Each folio has a front (recto) and back (verso) side -- what we would consider a printed page, so the six folios of each ternion comprise twelve pages.) Alphabetic sequences (such as `a`, `b`, `c`... and `AA`, `BB`, `CC`... ) are printed in the lower right corner of the opening rectos of each ternion so that sections can be grouped in the proper order.  
 
 
-## How
+In volume 5, for example, the texts of the four gospels are printed on quires `A`..`Q`, and quire `R` begins the letters of Paul starting with *Romans*. Identifying a page as "volume 5, quire `A`, page 1 recto" unambiguously refers to the first page of this section (a prolog to *Romans*), whether quire `R` is placed immediately after the Gospels (as some copies of volume 5 do), or whether it follows an essay on the travels of Paul (as other copies choose to do).
 
-- did this with new version of `CitablePhysicalText` package: genreated directly from codex model.
+![Quire mark identifying first page of volume 5, quire `R`](./vol5-quireR.png)
+
+I have been able to complete a quire analysis of all six volumes.[^collateme] I have updated the IIIF manifests with this information. You can still use any IIIF viewer you choose to browse the images, but each page is now identified in relation to its volume, quire,folio, and side.
+
+
+[^collateme]: I've documented the quire sequences [here](https://neelsmith.quarto.pub/digitalcomplutensian/complutensian/organization/collation/). See also [this page]((https://neelsmith.quarto.pub/digitalcomplutensian/complutensian/organization/registers/)) for information about the registry of quires printed in volumes 1-4 of the Complutensian.
+
+
+
+## Automating generation of IIIF manifests
+
+
+```{julia}
+#| include: false
+using Pkg
+Pkg.add("CitableBase")
+Pkg.add("CitableImage")
+Pkg.add("CitablePhysicalText")
+```
+
+
+I documented the collation of the Complutensian's volumes in delimited-text files. In addition to identifying each page and a documentary image with URN values, I followed the simple `Codex` model of `CitablePhysicalText` page, and included a sequence number, an identification of the page as recto or verso, and a label. Here's an extract from the data set for volume 5 showing what a header line and a data line for volume 5, quire R, page 1 recto, look like:
+
+```
+sequence|image|urn|rv|label
+213|urn:cite2:citebne:complutensian.v1:v5c_p17|urn:cite2:complut:pages.bne:vol5_R_1r|recto|Complutensian Bible, National Library of Spain, vol5, quire R, page 1r.
+```
+
+The full data set is in the project github repository.  We can instantiate a `Codex` object directly from a URL.
+
+```{julia}
+#| warning: false
+using CitableBase, CitablePhysicalText
+codexurl = "https://raw.githubusercontent.com/neelsmith/complutensian-texts/refs/heads/main/codex/bne_v5.cex"
+codex = fromcex(codexurl, Codex, UrlReader)[1]
+```
+
+The current version of the `CitablePhysicalText` package lets us generate an IIIF manifest directory from a `Codex` object.  (See a [tutorial from the package documentation](https://neelsmith.quarto.pub/citablephysicaltext/tutorials/iiif.html).)
+
+
+We need to create an `IIIFservice`, from the `CitableImage` package. Here is the IIIF server at the University of Houston where our images are available:
+
+```{julia}
+using CitableImage
+imgsvc_baseurl = "http://www.homermultitext.org/iipsrv"
+imgsvc_root = "/project/homer/pyramidal/deepzoom"
+imgsvc = IIIFservice(imgsvc_baseurl, imgsvc_root)
+```
+
+We also need to configure settings for the manifest. There are many options, but the only required parameter is the identifier for the manifest itself. This should be a URL where the manifest will be available. We'll use a URL for its location in our github repository.You could serve an identical manifest from any URL you like by using your URL as the parameter. 
+
+```{julia}
+manifestid = "https://raw.githubusercontent.com/neelsmith/complutensian-texts/refs/heads/main/iiif/complutensian-bne-v5-manifest.json"
+config = iiifconfig(manifestid)
+```
+
+At this point, generating the manifest itself is a one-liner:
+
+```{julia}
+#| eval: false
+vol5manifest = iiifmanifest(codex, config, imgsvc)
+```
+
+
+## Validating data
 
 - this means: every image tested!
 
