@@ -89,9 +89,10 @@ vol5manifest = iiifmanifest(codex, config, imgsvc)
 ```
 
 
-## Validating data
+## Validating the manifest
 
-- this means: every image tested!
+The `iiifmanifest` function is not only a convenient way to quickly generate IIIF manifests from structured data: it also guarantees the structure of the resulting JSON, and the validity of all image references.
 
-https://neelsmith.quarto.pub/digitalcomplutensian/resources/images/
+The `iiifmanifest` checks the JSON string it composes to ensure that it is valid JSON. As it constructs the manifest from a `Codex`, `iiifmanifest` queries the configured image server for metadata about each image, using the IIIF protocol's `info` query. If the image service is able to respond to this query with a valid reply, we know that the reference to the image is valid on the server documented in the manifest. The result is a complete manifest that we are guaranteed can be used with any IIIF viewer applications.
+
 
