@@ -9,16 +9,27 @@ categories: [small digital, iiif, complutensian] # self-defined categories
 citation: 
   url: https://neelsmith.quarto.pub/posts/2025-01-09-updates-to-iiif/ 
 image: ../imgs/comp-in-tify.png
-draft: true # setting this to false publishes it
+draft: false # setting this to false publishes it
 ---
 
-## Updated IIIF manifests
 
-- initial manifest was just to make sense of images not cataloged on LoC. (See here: https://neelsmith.quarto.pub/posts/2024-11-13-complutensian-iiif/index.html)
+## Why
+
+I first cobbled together IIIF manifests for each of the six volumes of the Computensian Bible so that I could browse and try to make sense of the images that were not documented on the web site where the Library of Congress published the openly licensed images. (Here's [the complicated story](https://neelsmith.quarto.pub/posts/2024-11-13-complutensian-iiif/index.html).)
+
+I've updated the IIIF manifests to address a second challenge for anyone  studying the Complutensian Bible. While all copies have essentially the same contents in each volume, they order the various sections of reference material in volumes 5 and 6 differently. In fact, of the seven copies I have been able to examine, each has a unique sequence of pages in volume 6!   Refering to pages by sequential page number wouldn't make sense.
+
+I have been able to complete a quire analysis of all six volumes. Most of the Complutensian was printed in ternions, or groups of three sheets. Each sheet is a double folio, so when stacked in a gather, or quire, of three sheets, each quire has six folios. Each folio has a front (recto) and back (verso) side -- what we would consider a printed page, so the six folios of each ternion comprise twelve pages.
+
+
+ and have now updated the manifests to identify 
 
 - since then, have completed quire analysis of all 6 volumes.
 
 - updated versions of main manifests for each volume identify pages by quire/page
+
+
+## How
 
 - did this with new version of `CitablePhysicalText` package: genreated directly from codex model.
 
