@@ -41,7 +41,7 @@ I have been able to complete a quire analysis of all six volumes.[^collateme] I 
 #| include: false
 using Pkg
 Pkg.add("CitableBase")
-Pkg.add("CitableImage")
+Pkg.add("CitableImage") 
 Pkg.add("CitablePhysicalText")
 ```
 
