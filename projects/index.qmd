@@ -15,3 +15,6 @@ I've done extensive preparatory work for a project I plan to return to in 2025:
 
 - "[semantic editions](https://neelsmith.quarto.pub/semanticeditions/)": digital editions of texts with significant non-textual material
 
+I'm investigating the possibility of returning to a project I've previously worked on:
+
+- [Trmilli](https://neelsmith.quarto.pub/trmilli/): archaeological and epigraphic data for the study of ancient Lycian
