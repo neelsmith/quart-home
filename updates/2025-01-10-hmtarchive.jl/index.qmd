@@ -5,7 +5,7 @@ description: "Version 0.16.1 of HmtArchive.jl supports automated generation of I
 author:
   - name: Neel Smith
 date: 2025-01-10
-categories: [iiif, complutensian, update] # self-defined categories
+categories: [iiif, hmt, update] # self-defined categories
 image: ../newrelease2.png
 draft: false # publish by setting to false
 
