@@ -12,7 +12,7 @@ image: ../imgs/scholion1.jpg
 draft: false # setting this to false publishes it
 ---
 
-The Homer Multitext project (HMT) has made its [digital photography of manuscripts](https://neelsmith.quarto.pub/hmt/images/) of the *Iliad* with scholia available online since 2007. Since 2017, we have published periodic releases of all the project's work in a single, massive plain-text file. These published datasets have always included catalogs of the project's digital images, and datasets relating the images to the manuscript pages they document. We're now beginning to add a third form of publication: extracts from the published datasets in the format of the IIIF Presentation Manifest.
+The Homer Multitext project (HMT) has made its [digital photography of manuscripts](https://neelsmith.quarto.pub/hmt/images/) of the *Iliad* with scholia available online since 2007. Since 2017, we have published periodic releases of all the project's work in a [single, massive plain-text file](https://github.com/homermultitext/hmt-archive/raw/refs/heads/master/releases-cex/hmt-current.cex). These published datasets have always included catalogs of the project's digital images, and datasets relating the images to the manuscript pages they document. We're now beginning to add a third form of publication: extracts from the published datasets in the format of the IIIF Presentation Manifest.
 
 ## What's included
 
@@ -39,17 +39,17 @@ currentrelease =  hmt_cex()
 mss = hmt_codices(currentrelease)
 ```
 
-As the example shows, the output is a list of `Codex` objects. Last week, I released a [version of the `CitablePhysicalText.jl` package](https://neelsmith.quarto.pub/updates/2025-01-07-iiif-manifests/index.html) that includes a new function, `iiifmanifest` for directly generating a presentation manifest from a `Codex` object.
+As the example shows, the output is a list of `Codex` objects. Last week, I released a [version of the `CitablePhysicalText.jl` package](https://neelsmith.quarto.pub/updates/2025-01-07-iiif-manifests/index.html) that includes a new function, `iiifmanifest`, for directly generating a presentation manifest from a `Codex` object.
 
 ::: {.callout-tip}
-The package documentation includes [a tutorial](https://cite-architecture.github.io/CitablePhysicalText.jl/tutorials/iiif.html) on how to build a IIIF manifest from a `Codex` object.
+The documentation for the `CitablePhysicalText` package includes [a tutorial](https://cite-architecture.github.io/CitablePhysicalText.jl/tutorials/iiif.html) on how to build a IIIF manifest from a `Codex` object.
 :::
 
 
 
 This is not only convenient:  `iiifmanifest` also validates both the syntax and the referential integrity of its reply. It parses the JSON syntax that IIIF viewers expect, and queries the configured image service for metadata about each image in the manifest, guaranteeing that viewer applications can correctly find the documented image.
 
-I've added a [`iiif` directory to the HMT project's github archive](https://github.com/homermultitext/hmt-archive/tree/master/iiif) where we will publish IIIF manifests for each of our documented manuscripts. Today we're publishing a manifest for the uniquely important Venetus A manuscript (Marciana 454 = 822). 
+I've added a [`iiif` directory to the HMT project's github archive](https://github.com/homermultitext/hmt-archive/tree/master/iiif) where we will publish IIIF manifests for each of our documented manuscripts. Today we're publishing a manifest for the uniquely important Venetus A manuscript (Marciana 454 = 822). Use [this URL](https://raw.githubusercontent.com/homermultitext/hmt-archive/refs/heads/master/iiif/venetusA.json) with any IIIF viewer that accepts a URL for a IIIF manifest, and you'll be browsing the Venetus A.
 
 ## Next steps
 
