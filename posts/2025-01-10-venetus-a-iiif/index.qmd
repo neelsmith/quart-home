@@ -1,0 +1,50 @@
+---
+title: "The Venetus A in a IIIF manifest"
+engine: julia
+description: "The HMT project publishes a IIIF manifest with validated images of the Venetus A manuscript."
+author:
+  - name: Neel Smith
+date: 2025-01-11
+categories: [iiif, hmt] # self-defined categories
+citation: 
+  url: https://neelsmith.quarto.pub/posts/2025-01-11-venetus-a-iiif/ 
+image: ../imgs/scholion1.jpg
+draft: false # setting this to false publishes it
+---
+
+The Homer Multitext project (HMT) has made its [digital photography of manuscripts](https://neelsmith.quarto.pub/hmt/images/) of the *Iliad* with scholia available online since 2007. Since 2017, we have published periodic releases of all the project's work in a single, massive plain-text file. These published datasets have always included catalogs of the project's digital images, and datasets relating the images to the manuscript pages they document. We're now beginning to add a third form of publication: extracts from the published datasets in the format of the IIIF Presentation Manifest.
+
+## What's included
+
+
+- simple model of codex:
+
+label, sequence, rv
+
+image/page relatd by urns
+
+basis for releated citable texts to physical support
+
+
+
+## How we do it
+
+
+The `HmtArchive.jl` package can work
+
+- release has always built Codex objects
+- new pkg works directly with them
+
+As good as the codex model!
+
+
+## Next steps
+
+Now 3 publications.
+
+1. the archive release (plain text)
+2. binary image data on 
+3. the IIIF manifests
+
+Can begin to review image data for other MSS and accuracy of codex models.
+
