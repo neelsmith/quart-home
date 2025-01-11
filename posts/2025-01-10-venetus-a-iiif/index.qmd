@@ -47,9 +47,9 @@ The package documentation includes [a tutorial](https://cite-architecture.github
 
 
 
-This is not only convenient: the `iiifmanifest` validates both the syntax and the referential integrity of its reply. It parses the JSON syntax that IIIF viewers expect, and queries the configured image service for metadata about each image in the manifest, guaranteeing that viewer applications can correctly find the documented image.
+This is not only convenient:  `iiifmanifest` also validates both the syntax and the referential integrity of its reply. It parses the JSON syntax that IIIF viewers expect, and queries the configured image service for metadata about each image in the manifest, guaranteeing that viewer applications can correctly find the documented image.
 
-I've added a [`iiif` directory to the HMT project's github archive](https://github.com/homermultitext/hmt-archive/tree/master/iiif) where we will publish IIIF for each of our documented manuscripts. Today we're publishing a manifest for the uniquely important Venetus A manuscript (Marciana 454 = 822). 
+I've added a [`iiif` directory to the HMT project's github archive](https://github.com/homermultitext/hmt-archive/tree/master/iiif) where we will publish IIIF manifests for each of our documented manuscripts. Today we're publishing a manifest for the uniquely important Venetus A manuscript (Marciana 454 = 822). 
 
 ## Next steps
 
