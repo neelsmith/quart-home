@@ -25,81 +25,32 @@ The [IIIF's Presentation model](https://iiif.io/api/presentation/3.0/) has overl
 
 ## How we do it
 
+`HmtArchive.jl` is a Julia package that streamlines working with the HMT project's published data sets. The `hmt_codices` function instantiates all the documented manuscripts in a release (currently seven).
 
-The `HmtArchive.jl` package can work
-
-- release has always built Codex objects
-- new pkg works directly with them
-
-As good as the codex model!
-
-
-
-Folio 12 recto in codex model:
-
-```
-sequence|urn|rv|label|image
-23|urn:cite2:hmt:msA.v1:12r|recto|Venetus A (Marciana 454 = 822), folio 12, recto|urn:cite2:hmt:vaimg.2017a:VA012RN_0013
+```{julia}
+#| include: false
+using Pkg
+Pkg.add("HmtArchive")
 ```
 
-In IIIF:
-
-```{json}
-{
-    "id": "canvases/12r",
-    "type": "Canvas",
-    "label": {
-        "en": [
-            "Venetus A (Marciana 454 = 822), folio 12, recto"
-        ]
-    },
-    "height": 6976,
-    "width": 5238,
- 
-    "items": [
-        {
-            "id": "annotations/12r",
-            "type": "AnnotationPage",
-            "items": [
-                {
-                "id": "annotations/12r",
-                "type": "Annotation",
-                "motivation": "painting",
-                "body": {
-                    "id": "http://www.homermultitext.org/iipsrv?IIIF=/project/homer/pyramidal/deepzoom/hmt/vaimg/2017a/VA012RN_0013.tif/full/2000,/0/default.jpg",
-                    "type": "Image",
-                    "format": "image/jpeg",
-                    "height": 6976,
-                    "width": 5238
-                },
-                "target": "canvases/12r",
-                "service": [
-                    {
-                        "id": "http://www.homermultitext.org/iipsrv?IIIF=/project/homer/pyramidal/deepzoom/hmt/vaimg/2017a/VA012RN_0013.tif",
-                        "profile": "level1",
-                        "type": "ImageService2"
-                    }
-                ]
-                }
-            ]
-        }
-        ]
-    }
+```{julia}
+using HmtArchive.Analysis
+currentrelease =  hmt_cex()
+mss = hmt_codices(currentrelease)
 ```
 
+As the example shows, the output is a list of `Codex` objects. Last week, I released a [version of the `CitablePhysicalText.jl` package](https://neelsmith.quarto.pub/updates/2025-01-07-iiif-manifests/index.html) that includes a new function, `iiifmanifest` for directly generating a presentation manifest from a `Codex` object.
+
+::: {.callout-tip}
+The package documentation includes [a tutorial](https://cite-architecture.github.io/CitablePhysicalText.jl/tutorials/iiif.html) on how to build a IIIF manifest from a `Codex` object.
+:::
 
 
+
+This is not only convenient: the `iiifmanifest` validates both the syntax and the referential integrity of its reply. It parses the JSON syntax that IIIF viewers expect, and queries the configured image service for metadata about each image in the manifest, guaranteeing that viewer applications can correctly find the documented image.
+
+I've added a [`iiif` directory to the HMT project's github archive](https://github.com/homermultitext/hmt-archive/tree/master/iiif) where we will publish IIIF for each of our documented manuscripts. Today we're publishing a manifest for the uniquely important Venetus A manuscript (Marciana 454 = 822). 
 
 ## Next steps
 
-Today we're publishing a manifest for the uniquely important Venetus A manuscript (Marciana 454 = 822).
-
-
-Now 3 publications.
-
-1. the archive release (plain text)
-2. binary image data on 
-3. the IIIF manifests
-
-Can begin to review image data for other MSS and accuracy of codex models.
-
+I plan to add IIIF manifests for the project's other six documented manuscripts to the github repository as they are successfully generated and tested.
