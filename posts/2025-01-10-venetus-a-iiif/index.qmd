@@ -17,15 +17,11 @@ The Homer Multitext project (HMT) has made its [digital photography of manuscrip
 ## What's included
 
 
-- simple model of codex:
+The HMT's data model for a codex manuscript is simple. It's a sequence of pages, each documented with a sequence number, identification as recto or verso, a full human-readable label, and a pair of CITE URNs associating identifiers for the physical page and the documentary image used to catalog the page.
 
-label, sequence, rv
+With this simple model, we can easily relate other citable content (most notably edited passages of the *Iliad* and scholia) to navigable views of a manuscript.
 
-image/page relatd by urns
-
-basis for releated citable texts to physical support
-
-
+The [IIIF's Presentation model](https://iiif.io/api/presentation/3.0/) has overlapping goals. Its elaborate JSON structure lets you define a series of canvases, on which you can place "annotation pages" that can include annotations such as images to place on the canvas. Many [IIIF viewers](https://iiif.io/get-started/iiif-viewers/) support navigating a series of images documented in a IIIF manifest. The new manifests for HMT manuscripts label images with the data of our simple codex model.
 
 ## How we do it
 
@@ -38,7 +34,66 @@ The `HmtArchive.jl` package can work
 As good as the codex model!
 
 
+
+Folio 12 recto in codex model:
+
+```
+sequence|urn|rv|label|image
+23|urn:cite2:hmt:msA.v1:12r|recto|Venetus A (Marciana 454 = 822), folio 12, recto|urn:cite2:hmt:vaimg.2017a:VA012RN_0013
+```
+
+In IIIF:
+
+```{json}
+{
+    "id": "canvases/12r",
+    "type": "Canvas",
+    "label": {
+        "en": [
+            "Venetus A (Marciana 454 = 822), folio 12, recto"
+        ]
+    },
+    "height": 6976,
+    "width": 5238,
+ 
+    "items": [
+        {
+            "id": "annotations/12r",
+            "type": "AnnotationPage",
+            "items": [
+                {
+                "id": "annotations/12r",
+                "type": "Annotation",
+                "motivation": "painting",
+                "body": {
+                    "id": "http://www.homermultitext.org/iipsrv?IIIF=/project/homer/pyramidal/deepzoom/hmt/vaimg/2017a/VA012RN_0013.tif/full/2000,/0/default.jpg",
+                    "type": "Image",
+                    "format": "image/jpeg",
+                    "height": 6976,
+                    "width": 5238
+                },
+                "target": "canvases/12r",
+                "service": [
+                    {
+                        "id": "http://www.homermultitext.org/iipsrv?IIIF=/project/homer/pyramidal/deepzoom/hmt/vaimg/2017a/VA012RN_0013.tif",
+                        "profile": "level1",
+                        "type": "ImageService2"
+                    }
+                ]
+                }
+            ]
+        }
+        ]
+    }
+```
+
+
+
+
 ## Next steps
+
+Today we're publishing a manifest for the uniquely important Venetus A manuscript (Marciana 454 = 822).
+
 
 Now 3 publications.
 
