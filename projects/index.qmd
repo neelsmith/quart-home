@@ -14,3 +14,4 @@ I've done extensive preparatory work for two projects I plan to return to in 202
 
 - "[semantic editions](https://neelsmith.quarto.pub/semanticeditions/)": digital editions of texts with significant non-textual material
 - the [Homer Multitext project](https://neelsmith.quarto.pub/hmt/):  a personal site about how I work with the Homer Multitext projet’s digital archive
+- Herodotus: reading an ancient text with assistance from AI
