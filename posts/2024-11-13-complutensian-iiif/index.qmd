@@ -41,7 +41,7 @@ I considered trying to write manifests that would provide information for the im
 
 The IIIF Presentation API offers an appropriate structure for describing a series of pages in a physical volume, with each page illustrated by an image. I took as a template JSON file an example of a [minimal manifest for the IIIF Presentation API](https://iiif.io/api/presentation/3.0/). I decided to create six manifests, one for each physical volume of the BNE Complutensian. Literally within minutes, I had six valid IIIF manifests, which I added to a github repository.
 
-There are [numerous freely available viewer applications](https://iiif.io/get-started/iiif-viewers/) for browsing images from a IIIF manifest. At this point, to browse the images for a volume of the Complutensian, you can copy any one fo these URLs, and paste them in to the IIIF viewer of your choice.
+There are [numerous freely available viewer applications](https://iiif.io/get-started/iiif-viewers/) for browsing images from a IIIF manifest. At this point, to browse the images for a volume of the Complutensian, you can copy any one of these URLs, and paste them in to the IIIF viewer of your choice.
 
 
 
@@ -60,9 +60,6 @@ Here's what the Tify browser looks like when you paste in the URL for the manife
 ![Volume 1 of the BNE Complutensian in the Tify image browser](./complutensian-iiif.png)
 
 
-:::{.callout-caution title="Caution: work in progress"}
-At the time of this blog post (Nov. 13, 2024), I've correctly processed and uploaded *almost* all of the images of the Complutensian Bible to the University of Houston IIIF service, but images for a series of pages beginning in the book of *Deuteronomy* are not yet in place. I'll post an [update notice here](https://neelsmith.quarto.pub/updates.html) when 100% of the images are available.
-:::
 
 ## Next steps
 
