@@ -5,7 +5,7 @@ description: "Read, navigate and retrieve data from CEX data sources (like the H
 author:
   - name: Neel Smith
 date: 2025-05-19
-categories: [vibe coding, cite] # self-defined categories
+categories: [vibe coding, cite, new package] # self-defined categories
 image: ../new-package.png
 draft: false
 

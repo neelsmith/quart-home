@@ -16,8 +16,8 @@ I am especially interested in studying ancient texts using computational approac
 Most of the sections on this site are still highly incomplete. All pages include a "Published" date showing when the page was last modified. 
 
 
-::: {.callout-tip appearance="minimal" title="<i class=\"bi bi-rss\"></i> RSS feeds to follow changes and news"}
+::: {.callout-tip appearance="minimal" title="<i class=\"bi bi-rss\"></i> Two RSS feeds to follow changes and news"}
 
 - [additions to or substantial revisions of the web site](https://neelsmith.quarto.pub/posts.xml) 
-- [new releases of Julia packages or updates to package documentation](https://neelsmith.quarto.pub/updates.xml)
+- [new releases of code packages or updates to package documentation](https://neelsmith.quarto.pub/updates.xml)
 :::
