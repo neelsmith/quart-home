@@ -11,19 +11,6 @@ draft: false
 
 ---
 
----
-title: "A vibe-coded javascript library for working with CTS and CITE2 URNs"
-engine: julia
-description: ""
-author:
-  - name: Neel Smith
-date: 2025-05-23
-categories: [vibe coding, cite,hmt,iiif, new package] # self-defined categories
-image: ../new-package.png
-draft: false
-
----
-
 
 
 ## New package announcement: `urn-lib.js`
