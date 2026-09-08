@@ -1,3 +1,4 @@
 # quart-home
 
-Personal web site to publish on quart-pub
+Archived version of the repository as of Sept. 8, 2026.
+
